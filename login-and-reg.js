@@ -39,6 +39,7 @@ signUpBtnTwo.onclick = function(){
 signUpBtn.onclick = function(){
   nameField.style.maxHeight = "65px";
   title.innerHTML = "Sign Up";
+  document.title ="Sign Up";
   signUpBtnTwo.classList.remove("dltBtn");
  logInBtn.classList.add("disable");
   signUpBtn.classList.remove("disable");
@@ -52,6 +53,7 @@ signUpBtn.onclick = function(){
 logInBtnTwo.onclick = function(){
   nameField.style.maxHeight = "0";
   title.innerHTML = "Welcome Back";
+  document.title ="Log In";
   signUpBtnTwo.classList.add("dltBtn");
   signUpBtn.classList.add("disable");
   logInBtn.classList.remove("dltBtn");
