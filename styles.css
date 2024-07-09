@@ -443,11 +443,11 @@
     color: red;
 }
 
-.notification_dd li.show-all {
+/* .notification_dd li.show-all {
     padding: 20px;
     display: flex;
     justify-content: center;
-}
+} */
 
 .menu_dd li {
     padding: 10px;
@@ -458,11 +458,11 @@
     text-align: center;
     align-items: center;
 }
-.notification_dd li.show-all p {
+/* .notification_dd li.show-all p {
     font-weight: 700;
     color: white;
     font-size: 15px;
-}
+} */
 .menu_ul li p {
     font-size: 10px;
 }
@@ -653,7 +653,7 @@ body.noscroll {/*aron di mo scroll ang background*/
     background-color: #b71c1c;
 }
 /*-------------------------------------------------DESIGN SA DEVICES NGA TAB-----------------------------------------------*/
-.profile-content.devices p{
+/* .profile-content.devices p{
     font-size: 12px;
 }
 
@@ -666,9 +666,9 @@ body.noscroll {/*aron di mo scroll ang background*/
     width: 50px;
     height: auto;
     margin: 10px 20px 5px 20px;
-}
+} */
 /*-------------------------------------------------DESIGN SA SECURITY NGA TAB-----------------------------------------------*/
-.profile-content.security button {
+/* .profile-content.security button {
     background-color: #47f7b7;
     margin-top: 5px;
     margin-bottom: 20px;
@@ -695,9 +695,9 @@ body.noscroll {/*aron di mo scroll ang background*/
     margin-bottom: 20px;
     margin-top: 5px;
     font-size: 13px;
-}
+} */
 /*-------------------------------------------------DESIGN SA LANGUAGE NGA TAB-----------------------------------------------*/
-.Choose-language button {
+/* .Choose-language button {
     background-color: #47f7b7;
     width: 200px;
     height: 30px;
@@ -720,12 +720,23 @@ body.noscroll {/*aron di mo scroll ang background*/
 
 .Choose-language button:hover {
     background-color: #05cb82;
-}
+} */
 /*-------------------------------------------------DESIGN SA UPDATES NGA TAB-----------------------------------------------*/
 .profile-content.updates {
     font-size: 10px;
     text-align: justify;
 }
+/*-------------------------------------------------DESIGN SA PRIVACY POLICY NGA TAB-----------------------------------------------*/
+
+.profile-content.policy {
+    font-size: 10px;
+    text-align: justify;
+}
+.profile-content.policy h1, .profile-content.policy h3 {
+    font-size: 15px;
+}
+
+
 
 /*--------------END OF POPUP------------------*/
 .OWTitle, .GenshinTitle {
@@ -755,11 +766,11 @@ body.noscroll {/*aron di mo scroll ang background*/
     margin-top: 40px;
     text-align: center;
 }
-.Open-World {
+/* .Open-World {
     background-color: #270D4E;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 30px;
     width: 12em;
@@ -767,7 +778,7 @@ body.noscroll {/*aron di mo scroll ang background*/
     border-radius: 20px;
     color: white;
     font-size: 20px;
-}
+} */
 
 .OWGameList {
     padding: 50px;
@@ -985,7 +996,304 @@ body.noscroll {/*aron di mo scroll ang background*/
 
 /*--------------------------------------------CLIENT HOMEPAGE------------------------------------------------*/
 .HPBody {
-    background-color: #0E0132;
+    background-image: url(/Images/ClientBg.PNG);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContainer h2 {
+    color: white;
+    margin: 30px;
+    font-size: 40px;
+    text-align: center;
+}
+/* General styling for the input field */
+.Search {
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 8px 20px;
+    margin-bottom: 30px;
+}
+.Search i {
+    font-size: 20px;
+}
+.Search-text {
+    background: transparent;
+    flex: 1;
+    border: none;
+    outline: none;
+}
+.Details-Services {
+    background-color: #1c006a;
+    width: 100%;
+    max-width: 1200px;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.Details-Services h3 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.Order-Status {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.profpic_status img {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.profpic_status {
+    display: flex;
+    color: white;
+    font-size: 13px;
+}
+
+.In-progress {
+    display: flex;
+}
+.Status_update {
+    background-color: #5aa388;
+    padding: 20px 5px 5px 15px;
+    border-radius: 10px;
+    width: 500px;
+    margin: 20px;
+}
+
+.In-progress p {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.fenk {
+    margin-left: 15px;
+    color: #Fe5efc;
+}
+
+.Name-rating {
+    display: flex;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.Name-rating i {
+    color: gold;
+    font-size: 15px;
+    margin-left: 10px;
+}
+.Intro-booster {
+    color: #000;
+}
+
+.Status_description {
+    display: flex;
+    flex-direction: column;
+}
+.Know-More {
+    color: white;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 400px;
+}
+
+.Order-List {
+    background-color: #452861;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 15px;
+    color: white;
+    margin-bottom: 40px; /* Center the container */
+}
+
+.alignList-See {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.alignList-See h4 {
+    font-size: 25px;
+}
+
+.Order-Detail {
+    padding: 10px;
+    background-color: #6A4480;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto; /* Enable horizontal scrolling for small screens */
+}
+
+.Order-Detail table {
+    width: 100%;
+    max-width: 100%;
+
+    margin: auto; /* Center the table */
+}
+
+.Order-Detail th, .Order-Detail td {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.Order-Detail th {
+    background-color: #6A4480; /* Different background color for header */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Order-Detail th, .Order-Detail td {
+        padding: 10px 5px; /* Reduce padding for smaller screens */
+        font-size: 12px; /* Reduce font size for smaller screens */
+    }
+    
+    .Order-Detail table {
+        display: block; /* Ensure table takes full width */
+    }
+}
+
+
+.message-booster {
+    background-color: #3c1b96;
+    /* position: absolute;
+    bottom: -400px;
+    left: 50px; */
+    border-radius: 100%;
+    padding: 5px;
+    align-items: centers;
+
+}
+.message-booster i {
+    font-size: 40px;
+}
+
+/*--------------------------------------------CLIENT ORDERS------------------------------------------------*/
+.ClientBody {
+    background-image: url(/Images/ClientBg.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.Orders-main {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.Orders-main h1 {
+    color: #C1E5FF;
+    margin: 40px 0 30px 0;
+}
+
+.CombinationSaBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Status-Add {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.Status-box, .Add-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #1c006a;
+    border-radius: 10px;
+    width: 500px;
+    height: auto;
+    padding: 25px;
+}
+
+.Status-box {
+    margin-right: 200px;
+}
+.Angorderstatus {
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 17px;
+}
+
+.Angorderstatus p {
+    margin-left: 15px;
+    font-weight: 700;
+    color: #Fe5efc;
+}
+
+.AngboxsudsaStatus-box img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+.AngboxsudsaStatus-box {
+    margin-top: 17px;
+    background-color: #5aa388;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.AngboxsudsaStatus-box p {
+    margin-bottom: 10px;
+}
+.AngboxsudsaStatus-box h6 {
+    color: white;
+    font-weight: 400;
+    font-size: 10px;
+}
+
+.Add-box h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.Add-box i {
+    font-size: 50px;
+}
+
+.FordaCircle {
+    border-radius: 100%;
+    background-color: #5128BF;
+    padding: 15px;
 }
 
 
