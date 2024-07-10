@@ -27,7 +27,7 @@ tabs.forEach((tab, index) => {
     });
 });
 
-
+/*----------------------------FOR NOTIFICATIONS---------------------------------*/
 document.addEventListener('DOMContentLoaded', (event) => {
     const bellIcon = document.getElementById('bell-icon');
     const notificationDropdown = document.getElementById('notification_dd');
@@ -49,18 +49,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 
     // Toggle menu dropdown
-    menuIcon.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (menuDropdown.style.display === 'none' || menuDropdown.style.display === '') {
-            menuDropdown.style.display = 'block';
-            menuIcon.classList.add('active');
-        } else {
-            menuDropdown.style.display = 'none';
-            menuIcon.classList.remove('active');
-        }
-        notificationDropdown.style.display = 'none';
-        bellIcon.classList.remove('active');
-    });
+    // menuIcon.addEventListener('click', (e) => {
+    //     e.stopPropagation();
+    //     if (menuDropdown.style.display === 'none' || menuDropdown.style.display === '') {
+    //         menuDropdown.style.display = 'block';
+    //         menuIcon.classList.add('active');
+    //     } else {
+    //         menuDropdown.style.display = 'none';
+    //         menuIcon.classList.remove('active');
+    //     }
+    //     notificationDropdown.style.display = 'none';
+    //     bellIcon.classList.remove('active');
+    // });
 
     // Close dropdowns when clicking outside
     document.addEventListener('click', (event) => {
@@ -68,11 +68,29 @@ document.addEventListener('DOMContentLoaded', (event) => {
             notificationDropdown.style.display = 'none';
             bellIcon.classList.remove('active');
         }
-        if (!menuIcon.contains(event.target) && !menuDropdown.contains(event.target)) {
-            menuDropdown.style.display = 'none';
-            menuIcon.classList.remove('active');
-        }
+        // if (!menuIcon.contains(event.target) && !menuDropdown.contains(event.target)) {
+        //     menuDropdown.style.display = 'none';
+        //     menuIcon.classList.remove('active');
+        // }
     });
 });
 
+/*----------------------------SA ADD ORDER PAGE - FILTER BOOSTER---------------------------------*/
+document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".filter-games button");
+    const boosters = document.querySelectorAll(".booster-1");
 
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            const game = button.dataset.game;
+            
+            boosters.forEach(booster => {
+                if (booster.dataset.games.includes(game)) {
+                    booster.style.display = "block";
+                } else {
+                    booster.style.display = "none";
+                }
+            });
+        });
+    });
+});
