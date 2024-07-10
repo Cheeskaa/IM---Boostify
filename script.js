@@ -94,3 +94,37 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+/*----------------------------SA BOOSTER PROFILE - ADD OG REVIEW---------------------------------*/
+function toggleReviewForm() {
+    const reviewForm = document.getElementById('reviewForm');
+    if (reviewForm.style.display === 'none') {
+        reviewForm.style.display = 'block';
+    } else {
+        reviewForm.style.display = 'none';
+    }
+}
+
+function addReview(event) {
+    event.preventDefault();
+
+    const rating = document.getElementById('rating').value;
+    const comment = document.getElementById('comment').value || 'No comment';
+    const reviewList = document.getElementById('reviewList');
+
+    const reviewDiv = document.createElement('div');
+    reviewDiv.classList.add('review');
+
+    const ratingP = document.createElement('p');
+    ratingP.textContent = `Rating: ${rating} stars`;
+    reviewDiv.appendChild(ratingP);
+
+    const commentP = document.createElement('p');
+    commentP.textContent = comment;
+    reviewDiv.appendChild(commentP);
+
+    reviewList.appendChild(reviewDiv);
+
+    document.getElementById('addReviewForm').reset();
+    toggleReviewForm();
+}
