@@ -294,10 +294,8 @@
     font-size: 25px;
     cursor: pointer;
 }
-.nav-menu {
-    margin-left: 50px;
-}
-.nav-home, .nav-order, .nav-booster, .nav-menu {
+
+.nav-home, .nav-order, .nav-booster {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -311,7 +309,7 @@
 .navbar_right p {
     font-size: 10px;
 }
-.navbar_right .bx, .nav-menu {
+.navbar_right .bx {
     font-size: 25px;
 }
 .navbar_right a::before {
@@ -766,7 +764,7 @@ body.noscroll {/*aron di mo scroll ang background*/
     margin-top: 40px;
     text-align: center;
 }
-/* .Open-World {
+.Open-World {
     background-color: #270D4E;
     display: flex;
     justify-content: center;
@@ -778,7 +776,7 @@ body.noscroll {/*aron di mo scroll ang background*/
     border-radius: 20px;
     color: white;
     font-size: 20px;
-} */
+}
 
 .OWGameList {
     padding: 50px;
@@ -1003,6 +1001,8 @@ body.noscroll {/*aron di mo scroll ang background*/
 }
 .mainContainer {
     display: flex;
+    flex: 1;
+    padding: 20px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -1117,6 +1117,13 @@ body.noscroll {/*aron di mo scroll ang background*/
     font-size: 12px;
     margin-top: 10px;
     margin-left: 400px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.Know-More:hover {
+    color: #47f7b7;
+    text-decoration: underline;
 }
 
 .Order-List {
@@ -1177,21 +1184,6 @@ body.noscroll {/*aron di mo scroll ang background*/
     }
 }
 
-
-.message-booster {
-    background-color: #3c1b96;
-    /* position: absolute;
-    bottom: -400px;
-    left: 50px; */
-    border-radius: 100%;
-    padding: 5px;
-    align-items: centers;
-
-}
-.message-booster i {
-    font-size: 40px;
-}
-
 /*--------------------------------------------CLIENT ORDERS------------------------------------------------*/
 .ClientBody {
     background-image: url(/Images/ClientBg.PNG);
@@ -1235,6 +1227,10 @@ body.noscroll {/*aron di mo scroll ang background*/
     width: 500px;
     height: auto;
     padding: 25px;
+}
+
+.Add-box {
+    text-decoration: none;
 }
 
 .Status-box {
@@ -1296,8 +1292,258 @@ body.noscroll {/*aron di mo scroll ang background*/
     padding: 15px;
 }
 
+/*--------------------------------------------CLIENT BOOSTER PROFILE------------------------------------------------*/
+.Client-BPBody, .Client-BoosterBody {
+    background-image: url(/Images/ClientBg.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
+.Client-BPMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.Client-BPMain h1 {
+    color: #C1E5FF;
+    margin: 40px 0 30px 0;
+}
 
+.ProfileSaBooster img {
+    width: 100px;
+    height: auto;
+}
+
+.AngDakoBlueBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #1c006a;
+    padding: 20px 20px 20px 0;
+    border-radius: 20px;
+    max-width: 1300px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.ProfileSaBooster {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    background-color: #452861;
+    padding: 20px 0 20px 20px;
+    border-radius: 10px;
+    margin: 30px;
+}
+
+.AlignInfo-Req {
+    background-color: #6A4480;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px 15px 50px;
+    border-radius: 20px 0 0 20px;   
+}
+
+.MgaInformationSaBooster {
+    display: flex;
+    flex-direction: column;
+}
+
+.Booster-credentials {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.Booster-rating {
+    display: flex;
+    font-weight: 600;
+    color: #fff;
+    /* margin-bottom: 5px; */
+}
+
+.Booster-rating i {
+    color: gold;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.booster-info {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 20px; /* Adjust spacing as needed */
+    color: #FFFFFF; /* Text color */
+    padding-top: 10px;
+    width: fit-content; /* Adjust width as needed */
+    font-size: 12px;
+}
+
+.Binfo-label {
+    text-align: left;
+    font-weight: 300;
+    font-size: 2;
+}
+
+.Binfo-value {
+    text-align: left;
+}
+
+.Request-Boost {
+    display: flex;
+    max-height: 30px;
+    height: 100%;
+}
+
+.Request-Boost button {
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #47f7b7;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+/*--------------------------------------------CLIENT ADD ORDER PAGE------------------------------------------------*/
+
+.BigBlueBox {
+    background-color: #1c006a;
+    border-radius: 20px;
+    width: 80%;
+    padding: 30px;
+    margin: 0 auto; /* Center the box horizontally */
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.BMSearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.BMSearch-text {
+    width: 60%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+}
+
+.bx-search {
+    position: relative;
+    left: -30px;
+    cursor: pointer;
+}
+
+h1, h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.filter-games {
+    padding: 20px;
+}
+
+.filter-games p {
+    color: white;
+    font-size: 18px;
+}
+
+.A-Buttons, .B-Buttons {
+    background-color: #0e0132;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-games button {
+    background-color: #47f7b7;
+    width: calc(20% - 10px); /* Five buttons per row with spacing */
+    height: 50px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.filter-games button:hover {
+    background-color: #05cb82;
+}
+
+.BigBlueBox2 {
+    background-color: #1c006a;
+    border-radius: 20px;
+    width: 80%;
+    padding: 30px;
+    margin: 0 auto; /* Center the box horizontally */
+    color: white; /* Ensure text color is white */
+    margin-bottom: 40px;
+}
+
+.BigBlueBox2 h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.avail-boosters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between booster-1 divs */
+    justify-content: center; /* Center the content */
+}
+
+.booster-1 {
+    background-color: #0e0132;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px; /* Fixed width for consistency */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.booster-1 a {
+    text-decoration: none;
+    color: white;
+}
+
+.star1-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the rating within the booster */
+    margin-bottom: 10px;
+}
+
+.star1-rating i {
+    color: #f7b733; /* Star color */
+    margin-right: 5px;
+}
+
+.star1-rating p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.booster-1 img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.booster-1 p {
+    margin: 5px 0;
+}
 /*--------------------------------------------FOOTER------------------------------------------------*/
 
 footer{
