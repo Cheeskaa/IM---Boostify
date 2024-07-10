@@ -8,9 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>ORDERS | BOOSTIFY</title>
+    <title>ADD ORDER | BOOSTIFY</title>
 </head>
-<body class="ClientBody">
+<body class="Client-BoosterBody">
     <!----------------------------------------CONTENTS SA PROFILE NGA POPUP--------------------------------------------->
     <div class="popup-container">
         <div class="popup-box">
@@ -214,7 +214,7 @@
                 </div>
             </div>
         </div>
-<!-------------------------------------------------------SA MAIN BODY NA NI---------------------------------------------------------->
+    <!-------------------------------------------------------SA MAIN BODY NA NI---------------------------------------------------------->
 <header class="OWHeader">
     <nav class="navbar">
         <div class="logo">
@@ -224,7 +224,7 @@
         <div class="navbar_right">
             <div class="nav-home"><a class="btn" href="ClientHomePage.html"><i class='bx bxs-home'></i><p>HOME</p></a></div>
             <div class="nav-order"><a class="btn active" href="ClientOrders.html"><i class='bx bxs-notepad'></i><p>ORDERS</p></a></div>
-            <div class="nav-booster"><a class="btn" href="#"><i class='bx bxs-game'></i></i><p>GAME LIST</p></a></div>
+            <div class="nav-booster"><a class="btn" href="#"><i class='bx bxs-game'></i><p>GAME LIST</p></a></div>
             <!-- <div class="nav-menu">
                 <i class='bx bx-menu' id="menu-icon"></i><p>MENU</p>
                 <div class="menu_dd" id="menu_dd">
@@ -272,93 +272,67 @@
         </div>
     </nav>
 </header>
-
-<main class="Orders-main">
-    <h1>ORDERS</h1>
-    <div class="CombinationSaBox">
-        <div class="Status-Add">
-            <div class="Status-box">
-                <div class="Angorderstatus">
-                    <h4>ORDER STATUS:</h4>
-                    <p>In-Progress</p>
-                </div>
-                <p>BOOSTER DETAILS AND SERVICES:</p>
-                <div class="AngboxsudsaStatus-box">
-                    <img src="/Images/profile.svg" alt="">
-                    <div class="Name-rating">
-                        <p>Clieve Owen N. Delima</p>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star-half'></i>
-                        <p>4.8</p>
-                    </div>
-                    <p>“An ex-pro Valorant player in Team Warriors”</p>
-                    <p>Services Offered: Genshin and Valorant</p>
-                    <h6>Know More</h6>
-                </div>
+<main class="Client-BoosterMain">
+    <div class="BigBlueBox">
+        <h1>SEARCH BOOSTER</h1>
+        <div class="BMSearch"><input class="BMSearch-text" type="text"><i class='bx bx-search'></i></div>
+        <h2>Games</h2>
+        <div class="filter-games">
+            <p>A</p>
+            <div class="A-Buttons">
+                <button data-game="VALORANT">VALORANT</button>
+                <button data-game="GENSHIN IMPACT">GENSHIN IMPACT</button>
+                <button data-game="LEAGUE OF LEGENDS">LEAGUE OF LEGENDS</button>
+                <button data-game="COUNTER STRIKE 2">COUNTER STRIKE 2</button>
+                <button data-game="APEX LEGENDS">APEX LEGENDS</button>
+                <button data-game="DOTA 2">DOTA 2</button>
+                <button data-game="MOBILE LEGENDS">MOBILE LEGENDS</button>
             </div>
-
-            <a class="Add-box" href="Add-Order.html"><div>
-                <h3>ADD ORDER</h3>
-                <div class="FordaCircle"><i class='bx bx-plus-medical'></i></div>
-            </div></a>
-        </div>
-
-        <div class="Order-List">
-            <div class="alignList-See">
-                <h4>Order List</h4>
-                <!-- <p>See All</p> -->
-            </div>
-            <div class="Order-Detail">
-                <table>
-                    <tr>
-                        <th>Session ID</th>
-                        <th>Booster</th>
-                        <th>Service Detail</th>
-                        <th>Duration</th>
-                        <th>Payment Method</th>
-                        <th>Status</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>David</td>
-                        <td>Valorant gold1-plat1</td>
-                        <td>3hrs</td>
-                        <td>Gcash</td>
-                        <td>Success</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>George</td>
-                        <td>LOL master-challenger</td>
-                        <td>8hrs</td>
-                        <td>-</td>
-                        <td>Failed</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Oliver</td>
-                        <td>LOL master-challenger</td>
-                        <td>5hrs</td>
-                        <td>Paypal</td>
-                        <td>Success</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>David</td>
-                        <td>ML Epic-Legend</td>
-                        <td>8hrs</td>
-                        <td>Gcash</td>
-                        <td>Success</td>
-                    </tr>
-                </table>
+            <p>B</p>
+            <div class="B-Buttons">
+                <button data-game="VALORANT">VALORANT</button>
+                <button data-game="GENSHIN IMPACT">GENSHIN IMPACT</button>
+                <button data-game="LEAGUE OF LEGENDS">LEAGUE OF LEGENDS</button>
+                <button data-game="COUNTER STRIKE 2">COUNTER STRIKE 2</button>
+                <button data-game="APEX LEGENDS">APEX LEGENDS</button>
+                <button data-game="DOTA 2">DOTA 2</button>
+                <button data-game="MOBILE LEGENDS">MOBILE LEGENDS</button>
             </div>
         </div>
     </div>
+    <div class="BigBlueBox2">
+        <h1>AVAILABLE BOOSTERS</h1>
+        <div class="avail-boosters">
+            <div class="booster-1" data-games="VALORANT">
+                <a href="#">
+                    <div class="star1-rating">
+                        <i class='bx bxs-star'></i><p>4.8</p>
+                    </div>
+                    <img src="/Images/profile.svg" alt="">
+                    <p>Jolie</p>
+                    <p>Genshin, Valorant</p>
+                </a>
+            </div>
+            <div class="booster-1" data-games="DOTA 2 LEAGUE OF LEGENDS">
+                <div class="star1-rating">
+                    <i class='bx bxs-star'></i><p>4.9</p>
+                </div>
+                <img src="/Images/profile.svg" alt="">
+                <p>Alex</p>
+                <p>League of Legends, Dota 2</p>
+            </div>
+            <div class="booster-1" data-games="APEX LEGENDS">
+                <div class="star1-rating">
+                    <i class='bx bxs-star'></i><p>4.7</p>
+                </div>
+                <img src="/Images/profile.svg" alt="">
+                <p>Sam</p>
+                <p>Apex Legends</p>
+            </div>
+            <!-- Add more booster-1 divs as needed -->
+        </div>
+    </div>
 </main>
-
 
     <!--------------------------------------FOOTER------------------------------------------->
     <footer>
