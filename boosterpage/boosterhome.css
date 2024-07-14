@@ -55,7 +55,9 @@ font-weight: bolder;
 line-height: 40px;
 list-style-type: none;
 background-color: #C1E5FF;
-
+}
+.dashboard a:hover{
+    background-color: aquamarine;
 }
 .taskboard{
 padding: 50px;
