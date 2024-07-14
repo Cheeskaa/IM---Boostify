@@ -1,0 +1,110 @@
+body{
+    background-color: #120141;
+}
+.header{
+position: absolute;
+width: 100%;
+height: 90px;
+left: 0px;
+top: 1px;
+background-color: #2a3052;
+}
+.header input{
+    margin-top: 30px;
+    margin-left: 650px;
+    margin-right: 380px;
+    width: 600px;
+    height: 30px;
+    border-radius: 30px;
+    font-size: 22px;
+    padding-left:10px;
+}
+.header img{
+    margin-left: 10px;
+}
+.dashboard{
+    /* Rectangle 156 */
+padding-top:20px;
+position: absolute;
+width: 510px;
+height: 603px;
+left: -42px;
+top: 170px;
+
+background: #222E70;
+border-radius: 30px;
+}
+.dashboard h1{
+    margin-left: 80px;
+    line-height: 50px;
+    font-size: 45px;
+    margin-bottom: 50px;
+    color: white;
+}
+.dashboard a{
+display: flex;
+margin-top:20px;
+margin-right: 50px;
+margin-left: -50px;
+padding-left: 100px;
+padding-top: 20px;
+padding-bottom:20px;
+border-radius: 40px;
+font-size: 30px;
+font-weight: bolder;
+line-height: 40px;
+list-style-type: none;
+background-color: #C1E5FF;
+
+}
+.taskboard{
+padding: 50px;
+position: absolute;
+width: 540px;
+height: 497px;
+left: 1225px;
+top: 200px;
+
+background: rgba(151, 71, 255, 0.71);
+border-radius: 10px;
+}
+.taskboard h2{
+    font-size: 40px;
+    margin-top:-10px;
+    margin-bottom: 50px;
+    margin-left: 40%;
+}
+.taskboard li{
+    list-style-type: none;
+}
+.boosthistory{
+    position: absolute;
+    width: 1300px;
+    height: 284px;
+    left: 490px;
+    top: 888px;
+    padding-top:7px;
+    background: rgba(71, 247, 183, 0.74);
+    border-radius: 30px;
+}
+.boosthistory h1{
+    display:inline;
+    margin-left:40%;
+}
+.boosthistory a{
+    margin-left:34%;
+    font-size: 24px;
+}
+.boosthistory hr{
+  margin-top: 10px;
+  line-height: 2px;
+  color: solid black;
+}
+.container{
+    position: absolute;
+    top: 160px;
+    width: 800px;
+    height: 900px;
+    background-color: #222E70;
+    left: 700px;
+}
