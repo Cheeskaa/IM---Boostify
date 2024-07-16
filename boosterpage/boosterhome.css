@@ -1,30 +1,36 @@
 body{
-    background-color: #120141;
+    background-color: #1c006a;
 }
 .header{
 position: absolute;
-width: 100%;
-height: 90px;
 left: 0px;
 top: 1px;
-background-color: #2a3052;
+background-color: #270D4E;
+display: flex;
+align-items: center;
+width: 100%;
+padding: 10px 20px;
+background: #0E0132;
+color: white;
 }
+
 .header input{
     margin-top: 30px;
     margin-left: 650px;
-    margin-right: 380px;
+    margin-right: 330px;
     width: 600px;
     height: 30px;
     border-radius: 30px;
     font-size: 22px;
     padding-left:10px;
+    opacity: 0%;
 }
 .header img{
     margin-left: 10px;
 }
 .dashboard{
     /* Rectangle 156 */
-padding-top:20px;
+padding-top:10px;
 position: absolute;
 width: 510px;
 height: 603px;
@@ -35,29 +41,43 @@ background: #222E70;
 border-radius: 30px;
 }
 .dashboard h1{
-    margin-left: 80px;
+    margin-left: 110px;
     line-height: 50px;
     font-size: 45px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     color: white;
+}
+.dashboard a:first{
+    background-color: aquamarine;
 }
 .dashboard a{
 display: flex;
 margin-top:20px;
-margin-right: 50px;
-margin-left: -50px;
-padding-left: 100px;
+margin-left: 15px;
+padding-left: 50px;
 padding-top: 20px;
 padding-bottom:20px;
-border-radius: 40px;
-font-size: 30px;
+border-radius: 30px;
+font-size: 40px;
 font-weight: bolder;
 line-height: 40px;
 list-style-type: none;
-background-color: #C1E5FF;
+text-decoration: none;
+}
+.options{
+    background-color: #C1E5FF;
+    width: 74%;
+
+}
+.on{
+    padding-left: 100px;
+    background-color: aquamarine;
+    width: 81%;
 }
 .dashboard a:hover{
     background-color: aquamarine;
+    border: 2px solid rgb(155, 155, 155);
+    transition: 0.5s;
 }
 .taskboard{
 padding: 50px;
@@ -79,12 +99,21 @@ border-radius: 10px;
 .taskboard li{
     list-style-type: none;
 }
+.bt{
+    width: 200px;
+    height: 40px;
+}
+.btholder{
+    position:sticky;
+    top:80%;
+    margin-left: 70px;
+}
 .boosthistory{
     position: absolute;
     width: 1300px;
     height: 284px;
-    left: 490px;
-    top: 888px;
+    left: 370px;
+    top: 860px;
     padding-top:7px;
     background: rgba(71, 247, 183, 0.74);
     border-radius: 30px;
@@ -105,8 +134,62 @@ border-radius: 10px;
 .container{
     position: absolute;
     top: 160px;
-    width: 800px;
-    height: 900px;
-    background-color: #222E70;
-    left: 700px;
+    width: 700px;
+    height: 800px;
+    background-color: rgba(71, 247, 183, 0.74);
+    left: 550px;
+    opacity: 90%;
+}
+.container h1{
+    margin-left: 250px;
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+hr{
+  height: 2px;
+  background-color: #301a2c;
+  border: none;
+}
+.rejected{
+    position: absolute;
+    top: 550px;
+    width: 500px;
+    height: 350px;
+    background-color: #b832da;
+    left: 1350px;
+    opacity: 90%;
+}
+.current{
+    position: absolute;
+    top: 170px;
+    width: 500px;
+    height: 300px;
+    background-color: #7bd4e4;
+    left: 1350px;
+    opacity: 90%;
+}
+.current h1{
+    margin-left: 150px;
+    font-size: 35px;
+}
+.rejected h1{
+    margin-left: 185px;
+    font-size: 35px;
+}
+.header img{
+    display: inline;
+    width: 60px;
+    height: 40px;
+    padding-right: 10px;
+}
+.dot {
+    height: 45px;
+    width: 45px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+.header i{
+    margin-right: 10px;
+    font-size: 25px;
 }

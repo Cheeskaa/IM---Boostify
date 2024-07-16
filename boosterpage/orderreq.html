@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="boosterhome.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <nav class="header"><img alt="logo"><input type="text"><img alt="notif"><img alt="profile"></nav>
-    <ul class="dashboard">
+    <div class="header"><img src="logoSS2.png" alt="logo"><h2>Boostify</h2><input type="text"><i class='bx bxs-bell' id="bell-icon"></i><span class="dot"></span></div>
+    <div class="dashboard">
         <h1>DASHBOARD</h1>
-        <a href="boosterhome.html">Home</a>
-        <a href="orderreq.html">Order Request</a>
-        <a>Transactions</a>
-        <a>Ratings</a>
-    </ul>
+        <a class="options" href="boosterhome.html">Home</a>
+        <a class="on" href="orderreq.html">Order Request</a>
+        <a class="options">Transactions</a>
+        <a class="options">Ratings</a>
+    </div>
 
-    <div class="container"></div>
+    <div class="container"><h1>Requests</h1><hr></div>
+    <div class="rejected"><h1>Rejected</h1><hr></div>
+    <div class="current"><h1>Current Client</h1><hr></div>
 </body>
 </html>
