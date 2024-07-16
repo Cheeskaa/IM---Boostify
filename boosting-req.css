@@ -1,0 +1,1083 @@
+body {
+  background-color: #0e0132;
+  font-family: "Montserrat", sans-serif;
+ }
+
+ .bstrReqTxt {
+    color: #c1e5ff;
+    font-weight: bold;
+    position: absolute;
+    top: 90px;
+    left: 556px;
+    font-size: 35px;
+ }
+
+ .con10t{
+  height: 700px;
+  background-color: #120141;
+ }
+
+.info_box {
+  width:94%;
+  background-color: #1a0062;
+  height: 450px;
+  position: absolute;
+  left: 15px;
+  top: 145px;
+  transform: translate(28px, 45px);
+  border-radius: 50px;
+  /* max-width: 450px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 27%;
+  background: #120141;
+  padding: 20px 60px 70px;
+  text-align: center; */
+}
+
+.submit-button {
+  transform: translate(548px, 575px);
+  border-radius: 50px;
+  padding: 15px 140px;
+  font-size: 30px;
+  font-weight: bold;
+  border: none;
+  background-color: #930092;
+  cursor: pointer;
+}
+
+.gameTitle {
+  margin: 20px;
+  color: #fe5efc;
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 40px;
+  font-family: "Montserrat";
+}
+
+.boostInfo {
+  margin: 20px;
+  padding-left: 40px;
+  padding-right: 40PX;
+}
+
+.forRank {
+  color: white;
+}
+
+.inputRank {
+  border: none;
+  padding: 15px 3px;
+  border-radius: 5px;
+  margin: 5px;
+  width: 110px;
+  height: 18px;
+  font-size: 18px;
+}
+
+.goToPaySec {
+  position: absolute;
+  top: 350px;
+  left: 80px;
+  border: none;
+  border-radius: 3px;
+  height: 22px;
+  font-size: 10px;
+  font-weight: bold;
+  width: 160px;
+  font-family: "Montserrat";
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #47f7b7;
+}
+
+.goToPaySec:hover, .submit-button:hover{
+  background-color: #41b58a;
+  box-shadow:3px 3px 10px #fe5efc;
+  cursor: pointer;
+}
+
+.input-p-Rank {
+  border: none;
+  padding: 10px 3px;
+  border-radius: 5px;
+  margin: 5px;
+  width: 75px;
+  height: 23px;
+  transform: translate(64.50px);
+  font-size: 18px;
+}
+
+.content-01 {
+  width: 35%;
+  height: 345px;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.selectedBooster {
+  position: absolute;
+  top: 90px;
+  left: 900px;
+  transform: translate(100px 40px);
+  width: 400px;
+  height: 290px;
+  border-radius: 20px;
+  background-color: #317e8d;
+  margin-bottom: none;
+}
+
+.boosterInfo {
+  background-color: aliceblue;
+  width: 170px;
+  position: absolute;
+  top: 60px;
+  transform: translate(120px);
+  border-radius: 10px;
+  height: 170px;
+  margin-top:none;
+  
+}
+
+.selectBstrBtn {
+  width: 200px;
+  position: absolute;
+  top: 240px;
+  left: 100px;
+}
+
+.canMesBtn {
+  background-color: #d0afaf;
+  border: black;
+  width: 93px;
+  border-radius: 5px;
+  padding-top: 5px;
+
+}
+
+.textBlw {
+  margin: 0px; 
+  text-align: center;
+}
+
+.canMesBtn:hover {
+  background-color: #ad9090;
+}
+
+.servTypeInput {
+  margin-top: 9.8px;
+  border-radius: 5px;
+  padding:10px;
+  width: 170px;
+  border: none;
+  font-weight: bold;
+  color: black;
+  font-size: 18px;
+}
+
+.ServiceTypeText {
+  color: white;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.content-02 {
+  width: 35%;
+}
+
+.content-03 {
+  width: 35%;
+}
+
+
+.LPHeader, .OWHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 98%;
+  padding: 5px 10px;
+  background: #0E0132;
+  color: white;
+}
+
+.logo {/*FOR ALL PAGES*/
+  display: flex;
+  align-items: center;
+}
+
+.logo img , .boostify img{/*FOR ALL PAGES*/
+  width: 60px;
+  height: 40px;
+  padding-right: 10px;
+}
+
+.LPLogin {
+  border-radius: 5px;
+  padding: 8px 35px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #ffffff;
+  background-color: #05cb82;
+  border: none;
+  cursor: pointer;
+}
+.LPright button:hover {
+  background-color: #47f7b7;
+  box-shadow: 0 0 10px #47f7b7;
+  color: white;
+  transition: 200ms;
+}
+
+.Welcome { /*Ang "UP YOUR GAME WITH BOOSTIFY"*/
+  position: relative;
+  height: 650px;
+  width: 100%;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}
+.Welcome::before {
+  background-image: url('Images/controller.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.6;
+}
+
+.content p, .first, .Games100, .centered-list, .stars, .GetStarted{
+  isolation: isolate;
+}
+
+.content {
+  color: white;
+  text-align: center;
+}
+
+.first { /*Gi pa gamay ang opacity sa "UP YOUR GAME WITH BOOSTIFY"*/
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 10px;
+}
+
+.Games100 {
+  font-size: 25px;
+}
+
+.centered-list {
+  list-style-type: none;
+  font-size: 20px;
+  padding: 0;
+  margin: 20px 0 0 0;
+  display: inline-block; /* Center the list itself */
+}
+
+.centered-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  margin-bottom: 5px;
+}
+
+.centered-list li::before {
+  content: '✔'; /* Unicode character for checkmark */
+  margin-right: 10px;
+  color: #47f7b7; /* Change color as needed */
+}
+
+.centered-list li:last-child {
+  margin-bottom: 0; /* Removes margin from the last list item */
+}
+
+.stars {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.stars::before {
+  content: '★ ★ ★ ★ ★'; /* Unicode characters for stars */
+  color: gold; /* Change color as needed */
+  margin-right: 10px;
+  font-size: 25px; /* Adjust size as needed */
+}
+
+.GetStarted {
+  border-radius: 20px;
+  font-size: 20px;
+  padding: 13px 120px;
+  font-weight: bold;
+  border-style: solid;
+  border-color: #47f7b7;
+  box-shadow: 0 0 20px #47f7b7;
+  color: #ecfff8;
+  background-color: #05cb82;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.GetStarted:hover {
+  background-color: #47f7b7;
+  color: white;
+  transition: 200ms;
+}
+
+.LPcontainer2, .LPcontainer3, .LPcontainer4, .LPcontainer5 {
+  background-color: #0a0124;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 50px;
+  margin-top: 10px;
+}
+.LPcontainer2 img, .LPcontainer3 img, .LPcontainer4 img, .LPcontainer5 img {
+  box-shadow: 0 0 10px #Fe5efc;
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+.LPcont2, .LPcont4 {
+  color: white;
+  font-size: 20px;
+  padding-right: 100px;
+}
+.LPtitle2, .LPtitle3, .LPtitle4, .LPtitle5{
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.LPcont3, .LPcont5 {
+  color: white;
+  font-size: 20px;
+  padding-left: 100px;
+}
+
+/*--------Frequently Asked Questions---------*/
+.LPwrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #0a0124;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 100px 150px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.LPwrapper h1 {
+  color: white;
+  margin-bottom: 30px;
+}
+
+.collapsible, .collapsible2, .collapsible3, .collapsible4 {
+  width: 100%;
+  overflow: hidden;
+  font-weight: 500;
+}
+
+.collapsible input, .collapsible2 input, .collapsible3 input, .collapsible4 input {
+  display: none;
+}
+
+.collapsible label, .collapsible2 label, .collapsible3 label, .collapsible4 label {
+  position: relative;
+  font-weight: 600;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  z-index: 1;
+  transition: background-color 0.3s ease; /* Transition for smooth color change */
+}
+
+.collapsible input:not(:checked) + label, .collapsible2 input:not(:checked) + label, .collapsible3 input:not(:checked) + label, .collapsible4 input:not(:checked) + label {
+  background-color: #707070; /* Change back to white when unchecked */
+}
+
+.collapsible label:hover:not(:checked), .collapsible2 label:hover:not(:checked), .collapsible3 label:hover:not(:checked), .collapsible4 label:hover:not(:checked) {
+  background-color: #474747; /* Change color on hover */
+}
+
+.collapsible input:checked + label, .collapsible2 input:checked + label, .collapsible3 input:checked + label, .collapsible4 input:checked + label {
+  background-color: #707070; /* Change color when clicked */
+}
+
+.collapsible label i, .collapsible2 label i, .collapsible3 label i, .collapsible4 label i {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.collapsible input:checked + label i, .collapsible2 input:checked + label i, .collapsible3 input:checked + label i, .collapsible4 input:checked + label i {
+  transform: rotate(45deg); /* Adjust the degree as needed */
+}
+
+.collapsible-text, .collapsible-text2, .collapsible-text3, .collapsible-text4 {
+  max-height: 1px;
+  overflow: hidden;
+  border-radius: 4px;
+  line-height: 1.4;
+  position: relative;
+  top: -100%;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.collapsible input:checked ~ .collapsible-text, .collapsible2 input:checked ~ .collapsible-text2, .collapsible3 input:checked ~ .collapsible-text3, .collapsible4 input:checked ~ .collapsible-text4 {
+  max-height: 300px;
+  color: white;
+  padding-bottom: 25px;
+  background: #303030;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+  opacity: 1;
+  top: 0;
+}
+
+.collapsible-text p, .collapsible-text2 p, .collapsible-text3 p, .collapsible-text4 p {
+  padding: 15px;
+}
+
+/*----------------------------------------OPEN WORLD PAGE--------------------------------------------*/
+.navbar {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar_right img {
+  width: 50px;
+}
+.navbar_right {
+  display: flex;
+  align-items: center;
+}
+.navbar_right .notificationBell {
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.nav-home, .nav-order, .nav-booster {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.navbar_right a {
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+  position: relative;
+}
+.navbar_right p {
+  font-size: 10px;
+}
+.navbar_right .bx {
+  font-size: 25px;
+}
+.navbar_right a::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: .3s;
+}
+.navbar_right .btn:hover {
+  color: #47f7b7;
+}
+.navbar_right .active {
+  color: #47f7b7;
+}
+.navbar_right .btn:hover::before {
+  width: 100%;
+  background: #47f7b7;
+}
+
+/*------------------------------NOTIFICATION DROPDOWN-------------------------------*/
+.navbar_right, .notificationBell, .nav-menu {
+  position: relative;
+}
+
+.notificationBell i:hover, .nav-menu i:hover {
+  color: #47f7b7;
+}
+
+.notification_dd {
+  position: absolute;
+  top: 48px;
+  background: #3c1b96;
+  width: 350px;
+  height: auto;
+  border-radius: 10px 0 10px 10px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, .125), -10px -10px 30px rgba(0, 0, 0, .125);
+  display: none;
+  z-index: 10;
+}
+
+.menu_dd {
+  position: absolute;
+  left: -70px;
+  top: 48px;
+  background: #3c1b96;
+  width: 150px;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, .125), -10px -10px 30px rgba(0, 0, 0, .125);
+  display: none;
+  z-index: 10;
+}
+
+.notification_dd::before, .menu_dd::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  border: 10px solid;
+  border-color: transparent transparent #293c9e transparent;
+}
+.notification_dd::before {
+  left: 330px;
+}
+.notification_dd {
+  right: 0;
+}
+
+.notification_dd li {
+  border-bottom: 1px solid black;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu_dd li {
+  border-bottom: 1px solid white;
+}
+
+.notification_dd li .notify_icon, .notify_icon {
+  display: flex;
+}
+
+.notify_data {
+  margin-right: 20px;
+}
+
+.notification_dd li .notify_icon .icon, .notify_icon .icon {
+  margin-right: 20px;
+  width: 40px;
+  height: 42px;
+}
+
+.notification_dd li .notify_data {
+  margin: 0 15px;
+  width: 185px;
+}
+.notify_data {
+  width: 100px;
+  margin: 0 15px;
+}
+
+.notify_title p  {
+  color: #000;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.notify_subtitle p {
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 5px;
+}
+
+.notify_status p {
+  font-size: 12px;
+}
+
+.notification_dd li.successful .notify_status p {
+  color: #47f7b7;
+}
+.notification_dd li.Failed .notify_status p {
+  color: red;
+}
+
+/* .notification_dd li.show-all {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+} */
+
+.menu_dd li {
+  padding: 10px;
+  display: flex;
+}
+.menu_ul {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+/* .notification_dd li.show-all p {
+  font-weight: 700;
+  color: white;
+  font-size: 15px;
+} */
+.menu_ul li p {
+  font-size: 10px;
+}
+.notificationBell.active i, .nav-menu.active i {
+  color: #47f7b7;
+}
+
+
+/*------------------END OF NAVBAR----------------------*/
+/*------------------POPUP PROFILE SETTINGS---------------------*/
+.profile {
+  cursor: pointer;
+}
+.popup-container { /*ang blur nga background*/
+  background-color: rgba(0, 0, 0, .3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 99999;
+}
+.popup-container.active {
+  opacity: 1;
+  pointer-events: auto;
+  transition: .4s ease;
+}
+body.noscroll {/*aron di mo scroll ang background*/
+  overflow: hidden;
+}
+
+.popup-container .popup-box {
+  background-color: #140337;
+  width: 900px; /* Fixed width */
+  height: 500px; /* Fixed height */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row; /* Ensure content inside the box is arranged in rows */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  transform: scale(0);
+}
+.popup-container.active .popup-box {
+  transform: scale(1);
+  transition: .4s ease;
+  transition-delay: .25s;
+}
+.bx-arrow-back {/*from popup to mainpage*/
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  color: white;
+  font-size: 30px;
+}
+
+.tab_box {/*ang buttons*/
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-right: 2px solid rgba(229, 229, 229);
+}
+
+.tab_box .tab_btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 200px;
+  border-radius: 10px;
+  padding: 10px 30px;
+  margin-bottom: 15px;
+  border: none;
+  background-color: #47f7b7;
+}
+
+.tab_box .tab_btn.active, .tab_btn:hover {
+  background-color: #418e72;
+}
+
+.tab_btn .bx {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.profpic img {/*size sa profile picutre sud sa popup*/
+  width: 150px;
+  height: auto;
+}
+
+.content_box {
+  padding: 20px;
+  color: white;
+  overflow-y: auto; /* Enable scrolling within the content box */
+}
+.content_box .profile-content { /* aron ma change ang contents ig pislit sa button */
+  display: none;
+}
+.content_box .profile-content.active {
+  display: block;
+}
+.content_box .profile-content h2 {
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-size: 25px;
+}
+
+/*--------DESIGNS SUD SA POPUP----------------*/
+.profile-container {
+  background-color: #270D4E;
+  display: flex;
+  padding: 20px 50px 20px 10px;
+  border-radius: 10px;
+  width: 590px;
+}
+
+/*-------------------------------------------------DESIGN SA MY PROFILE NGA TAB-----------------------------------------------*/
+.profpic { /* ang profile picutre og ang word profile picture */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  margin-right: 20px;
+}
+.profpic p {
+  margin-top: 5px;
+}
+
+.credentials {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.name-address {
+  font-size: 15px;
+}
+
+.user-info {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px 20px; /* Adjust spacing as needed */
+  color: #FFFFFF; /* Text color */
+  background-color: #2A004F; /* Background color */
+  padding-top: 20px;
+  width: fit-content; /* Adjust width as needed */
+  font-size: 12px;
+}
+
+.info-label {
+  text-align: left;
+  font-weight: 300;
+  font-size: 2;
+}
+
+.info-value {
+  text-align: left;
+}
+
+.edit_or_logout {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+}
+
+.edit_or_logout {
+  position: absolute;
+  bottom: 50px;
+  right: 30px;
+}
+/*-------------LOGOUT BUTTONS SA POPUPS---------------*/
+.edit_or_logout button, .Logout-devices {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+.edit_btn {
+  background-color: #47f7b7;
+  margin-right: 10px;
+}
+.edit_btn:hover, .profile-content.security button:hover {
+  background-color: #05cb82;
+}
+.logout_btn, .Logout-devices {
+  background-color: #ce5151;
+}
+.logout_btn:hover, .Logout-devices:hover {
+  background-color: #b71c1c;
+}
+
+.navbar_right, .notificationBell, .nav-menu {
+  position: relative;
+}
+
+.notificationBell i:hover, .nav-menu i:hover {
+  color: #47f7b7;
+}
+
+.notification_dd {
+  position: absolute;
+  top: 48px;
+  background: #3c1b96;
+  width: 350px;
+  height: auto;
+  border-radius: 10px 0 10px 10px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, .125), -10px -10px 30px rgba(0, 0, 0, .125);
+  display: none;
+  z-index: 10;
+}
+
+.menu_dd {
+  position: absolute;
+  left: -70px;
+  top: 48px;
+  background: #3c1b96;
+  width: 150px;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, .125), -10px -10px 30px rgba(0, 0, 0, .125);
+  display: none;
+  z-index: 10;
+}
+
+.notification_dd::before, .menu_dd::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  border: 10px solid;
+  border-color: transparent transparent #293c9e transparent;
+}
+.notification_dd::before {
+  left: 330px;
+}
+.notification_dd {
+  right: 0;
+}
+
+.notification_dd li {
+  border-bottom: 1px solid black;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu_dd li {
+  border-bottom: 1px solid white;
+}
+
+.notification_dd li .notify_icon, .notify_icon {
+  display: flex;
+}
+
+.notify_data {
+  margin-right: 20px;
+}
+
+.notification_dd li .notify_icon .icon, .notify_icon .icon {
+  margin-right: 20px;
+  width: 40px;
+  height: 42px;
+}
+
+.notification_dd li .notify_data {
+  margin: 0 15px;
+  width: 185px;
+}
+.notify_data {
+  width: 100px;
+  margin: 0 15px;
+}
+
+.notify_title p  {
+  color: #000;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.notify_subtitle p {
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 5px;
+}
+
+.notify_status p {
+  font-size: 12px;
+}
+
+.notification_dd li.successful .notify_status p {
+  color: #47f7b7;
+}
+.notification_dd li.Failed .notify_status p {
+  color: red;
+}
+
+/* .notification_dd li.show-all {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+} */
+
+.menu_dd li {
+  padding: 10px;
+  display: flex;
+}
+.menu_ul {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+/* .notification_dd li.show-all p {
+  font-weight: 700;
+  color: white;
+  font-size: 15px;
+} */
+.menu_ul li p {
+  font-size: 10px;
+}
+.notificationBell.active i, .nav-menu.active i {
+  color: #47f7b7;
+}
+
+
+/*------------------END OF NAVBAR----------------------*/
+/*------------------POPUP PROFILE SETTINGS---------------------*/
+.profile {
+  cursor: pointer;
+}
+.popup-container { /*ang blur nga background*/
+  background-color: rgba(0, 0, 0, .3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 99999;
+}
+.popup-container.active {
+  opacity: 1;
+  pointer-events: auto;
+  transition: .4s ease;
+}
+body.noscroll {/*aron di mo scroll ang background*/
+  overflow: hidden;
+}
+
+.popup-container .popup-box {
+  background-color: #140337;
+  width: 900px; /* Fixed width */
+  height: 500px; /* Fixed height */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row; /* Ensure content inside the box is arranged in rows */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  transform: scale(0);
+}
+.popup-container.active .popup-box {
+  transform: scale(1);
+  transition: .4s ease;
+  transition-delay: .25s;
+}
+.bx-arrow-back {/*from popup to mainpage*/
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  color: white;
+  font-size: 30px;
+}
+
+.tab_box {/*ang buttons*/
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-right: 2px solid rgba(229, 229, 229);
+}
+
+.tab_box .tab_btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 200px;
+  border-radius: 10px;
+  padding: 10px 30px;
+  margin-bottom: 15px;
+  border: none;
+  background-color: #47f7b7;
+}
+
+.tab_box .tab_btn.active, .tab_btn:hover {
+  background-color: #418e72;
+}
+
+.tab_btn .bx {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.profpic img {/*size sa profile picutre sud sa popup*/
+  width: 150px;
+  height: auto;
+}
+
+.content_box {
+  padding: 20px;
+  color: white;
+  overflow-y: auto; /* Enable scrolling within the content box */
+}
+.content_box .profile-content { /* aron ma change ang contents ig pislit sa button */
+  display: none;
+}
+.content_box .profile-content.active {
+  display: block;
+}
+.content_box .profile-content h2 {
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-size: 25px;
+}
+
+/*--------DESIGNS SUD SA POPUP----------------*/
+.profile-container {
+  background-color: #270D4E;
+  display: flex;
+  padding: 20px 50px 20px 10px;
+  border-radius: 10px;
+  width: 590px;
+}
