@@ -1,0 +1,1997 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+/*------------------------------------LANDING PAGE-----------------------------------------*/
+.LPBody, .OWBody, .GBody {
+    background-color: #120141;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    height: 1000px;
+}
+
+.LPHeader, .OWHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 50px;
+    background: #0E0132;
+    color: white;
+}
+
+.logo {/*FOR ALL PAGES*/
+    display: flex;
+    align-items: center;
+}
+
+.logo img , .boostify img{/*FOR ALL PAGES*/
+    width: 60px;
+    height: 40px;
+    padding-right: 10px;
+}
+
+.LPLogin {
+    border-radius: 5px;
+    padding: 8px 35px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #05cb82;
+    border: none;
+    cursor: pointer;
+}
+.LPright button:hover {
+    background-color: #47f7b7;
+    box-shadow: 0 0 10px #47f7b7;
+    color: white;
+    transition: 200ms;
+}
+
+.Welcome { /*Ang "UP YOUR GAME WITH BOOSTIFY"*/
+    position: relative;
+    height: 650px;
+    width: 100%;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+.Welcome::before {
+    background-image: url('Images/controller.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.6;
+}
+
+.content p, .first, .Games100, .centered-list, .stars, .GetStarted{
+    isolation: isolate;
+}
+
+.content {
+    color: white;
+    text-align: center;
+}
+
+.first { /*Gi pa gamay ang opacity sa "UP YOUR GAME WITH BOOSTIFY"*/
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 10px;
+}
+
+.Games100 {
+    font-size: 25px;
+}
+
+.centered-list {
+    list-style-type: none;
+    font-size: 20px;
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: inline-block; /* Center the list itself */
+}
+
+.centered-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+    margin-bottom: 5px;
+}
+
+.centered-list li::before {
+    content: '✔'; /* Unicode character for checkmark */
+    margin-right: 10px;
+    color: #47f7b7; /* Change color as needed */
+}
+
+.centered-list li:last-child {
+    margin-bottom: 0; /* Removes margin from the last list item */
+}
+
+.stars {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.stars::before {
+    content: '★ ★ ★ ★ ★'; /* Unicode characters for stars */
+    color: gold; /* Change color as needed */
+    margin-right: 10px;
+    font-size: 25px; /* Adjust size as needed */
+}
+
+.GetStarted {
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 13px 120px;
+    font-weight: bold;
+    border-style: solid;
+    border-color: #47f7b7;
+    box-shadow: 0 0 20px #47f7b7;
+    color: #ecfff8;
+    background-color: #05cb82;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.GetStarted:hover {
+    background-color: #47f7b7;
+    color: white;
+    transition: 200ms;
+}
+
+.LPcontainer2, .LPcontainer3, .LPcontainer4, .LPcontainer5 {
+    background-color: #0a0124;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 50px;
+    margin-top: 10px;
+}
+.LPcontainer2 img, .LPcontainer3 img, .LPcontainer4 img, .LPcontainer5 img {
+    box-shadow: 0 0 10px #Fe5efc;
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+.LPcont2, .LPcont4 {
+    color: white;
+    font-size: 20px;
+    padding-right: 100px;
+}
+.LPtitle2, .LPtitle3, .LPtitle4, .LPtitle5{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.LPcont3, .LPcont5 {
+    color: white;
+    font-size: 20px;
+    padding-left: 100px;
+}
+
+/*--------Frequently Asked Questions---------*/
+.LPwrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #0a0124;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 100px 150px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.LPwrapper h1 {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.collapsible, .collapsible2, .collapsible3, .collapsible4 {
+    width: 100%;
+    overflow: hidden;
+    font-weight: 500;
+}
+
+.collapsible input, .collapsible2 input, .collapsible3 input, .collapsible4 input {
+    display: none;
+}
+
+.collapsible label, .collapsible2 label, .collapsible3 label, .collapsible4 label {
+    position: relative;
+    font-weight: 600;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+    z-index: 1;
+    transition: background-color 0.3s ease; /* Transition for smooth color change */
+}
+
+.collapsible input:not(:checked) + label, .collapsible2 input:not(:checked) + label, .collapsible3 input:not(:checked) + label, .collapsible4 input:not(:checked) + label {
+    background-color: #707070; /* Change back to white when unchecked */
+}
+
+.collapsible label:hover:not(:checked), .collapsible2 label:hover:not(:checked), .collapsible3 label:hover:not(:checked), .collapsible4 label:hover:not(:checked) {
+    background-color: #474747; /* Change color on hover */
+}
+
+.collapsible input:checked + label, .collapsible2 input:checked + label, .collapsible3 input:checked + label, .collapsible4 input:checked + label {
+    background-color: #707070; /* Change color when clicked */
+}
+
+.collapsible label i, .collapsible2 label i, .collapsible3 label i, .collapsible4 label i {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.collapsible input:checked + label i, .collapsible2 input:checked + label i, .collapsible3 input:checked + label i, .collapsible4 input:checked + label i {
+    transform: rotate(45deg); /* Adjust the degree as needed */
+}
+
+.collapsible-text, .collapsible-text2, .collapsible-text3, .collapsible-text4 {
+    max-height: 1px;
+    overflow: hidden;
+    border-radius: 4px;
+    line-height: 1.4;
+    position: relative;
+    top: -100%;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.collapsible input:checked ~ .collapsible-text, .collapsible2 input:checked ~ .collapsible-text2, .collapsible3 input:checked ~ .collapsible-text3, .collapsible4 input:checked ~ .collapsible-text4 {
+    max-height: 300px;
+    color: white;
+    padding-bottom: 25px;
+    background: #303030;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+    opacity: 1;
+    top: 0;
+}
+
+.collapsible-text p, .collapsible-text2 p, .collapsible-text3 p, .collapsible-text4 p {
+    padding: 15px;
+}
+
+/*----------------------------------------OPEN WORLD PAGE--------------------------------------------*/
+.navbar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar_right img {
+    width: 50px;
+}
+.navbar_right {
+    display: flex;
+    align-items: center;
+}
+.navbar_right .notificationBell {
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.nav-home, .nav-order, .nav-booster {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.navbar_right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    position: relative;
+}
+.navbar_right p {
+    font-size: 10px;
+}
+.navbar_right .bx {
+    font-size: 25px;
+}
+.navbar_right a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: .3s;
+}
+.navbar_right .btn:hover {
+    color: #47f7b7;
+}
+.navbar_right .active {
+    color: #47f7b7;
+}
+.navbar_right .btn:hover::before {
+    width: 100%;
+    background: #47f7b7;
+}
+
+/*------------------------------NOTIFICATION DROPDOWN-------------------------------*/
+.navbar_right, .notificationBell, .nav-menu {
+    position: relative;
+}
+
+.notificationBell i:hover, .nav-menu i:hover {
+    color: #47f7b7;
+}
+
+.notification_dd {
+    position: absolute;
+    top: 48px;
+    background: #3c1b96;
+    width: 350px;
+    height: auto;
+    border-radius: 10px 0 10px 10px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, .125), -10px -10px 30px rgba(0, 0, 0, .125);
+    display: none;
+    z-index: 10;
+}
+
+.menu_dd {
+    position: absolute;
+    left: -70px;
+    top: 48px;
+    background: #3c1b96;
+    width: 150px;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, .125), -10px -10px 30px rgba(0, 0, 0, .125);
+    display: none;
+    z-index: 10;
+}
+
+.notification_dd::before, .menu_dd::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    border: 10px solid;
+    border-color: transparent transparent #293c9e transparent;
+}
+.notification_dd::before {
+    left: 330px;
+}
+.notification_dd {
+    right: 0;
+}
+
+.notification_dd li {
+    border-bottom: 1px solid black;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu_dd li {
+    border-bottom: 1px solid white;
+}
+
+.notification_dd li .notify_icon, .notify_icon {
+    display: flex;
+}
+
+.notify_data {
+    margin-right: 20px;
+}
+
+.notification_dd li .notify_icon .icon, .notify_icon .icon {
+    margin-right: 20px;
+    width: 40px;
+    height: 42px;
+}
+
+.notification_dd li .notify_data {
+    margin: 0 15px;
+    width: 185px;
+}
+.notify_data {
+    width: 100px;
+    margin: 0 15px;
+}
+
+.notify_title p  {
+    color: #000;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.notify_subtitle p {
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 5px;
+}
+
+.notify_status p {
+    font-size: 12px;
+}
+
+.notification_dd li.successful .notify_status p {
+    color: #47f7b7;
+}
+.notification_dd li.Failed .notify_status p {
+    color: red;
+}
+
+/* .notification_dd li.show-all {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+} */
+
+.menu_dd li {
+    padding: 10px;
+    display: flex;
+}
+.menu_ul {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+/* .notification_dd li.show-all p {
+    font-weight: 700;
+    color: white;
+    font-size: 15px;
+} */
+.menu_ul li p {
+    font-size: 10px;
+}
+.notificationBell.active i, .nav-menu.active i {
+    color: #47f7b7;
+}
+
+
+/*------------------END OF NAVBAR----------------------*/
+/*------------------POPUP PROFILE SETTINGS---------------------*/
+.profile {
+    cursor: pointer;
+}
+.popup-container { /*ang blur nga background*/
+    background-color: rgba(0, 0, 0, .3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 99999;
+}
+.popup-container.active {
+    opacity: 1;
+    pointer-events: auto;
+    transition: .4s ease;
+}
+body.noscroll {/*aron di mo scroll ang background*/
+    overflow: hidden;
+}
+
+.popup-container .popup-box {
+    background-color: #140337;
+    width: 900px; /* Fixed width */
+    height: 500px; /* Fixed height */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row; /* Ensure content inside the box is arranged in rows */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    transform: scale(0);
+}
+.popup-container.active .popup-box {
+    transform: scale(1);
+    transition: .4s ease;
+    transition-delay: .25s;
+}
+.bx-arrow-back {/*from popup to mainpage*/
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: white;
+    font-size: 30px;
+}
+
+.tab_box {/*ang buttons*/
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-right: 2px solid rgba(229, 229, 229);
+}
+
+.tab_box .tab_btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 200px;
+    border-radius: 10px;
+    padding: 10px 30px;
+    margin-bottom: 15px;
+    border: none;
+    background-color: #47f7b7;
+}
+
+.tab_box .tab_btn.active, .tab_btn:hover {
+    background-color: #418e72;
+}
+
+.tab_btn .bx {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.profpic img {/*size sa profile picutre sud sa popup*/
+    width: 150px;
+    height: auto;
+}
+
+.content_box {
+    padding: 20px;
+    color: white;
+    overflow-y: auto; /* Enable scrolling within the content box */
+}
+.content_box .profile-content { /* aron ma change ang contents ig pislit sa button */
+    display: none;
+}
+.content_box .profile-content.active {
+    display: block;
+}
+.content_box .profile-content h2 {
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 25px;
+}
+
+/*--------DESIGNS SUD SA POPUP----------------*/
+.profile-container {
+    background-color: #270D4E;
+    display: flex;
+    padding: 20px 50px 20px 10px;
+    border-radius: 10px;
+    width: 590px;
+}
+
+/*-------------------------------------------------DESIGN SA MY PROFILE NGA TAB-----------------------------------------------*/
+.profpic { /* ang profile picutre og ang word profile picture */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    margin-right: 20px;
+}
+.profpic p {
+    margin-top: 5px;
+}
+
+.credentials {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.name-address {
+    font-size: 15px;
+}
+
+.user-info {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 20px; /* Adjust spacing as needed */
+    color: #FFFFFF; /* Text color */
+    background-color: #2A004F; /* Background color */
+    padding-top: 20px;
+    width: fit-content; /* Adjust width as needed */
+    font-size: 12px;
+}
+
+.info-label {
+    text-align: left;
+    font-weight: 300;
+    font-size: 2;
+}
+
+.info-value {
+    text-align: left;
+}
+
+.edit_or_logout {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+}
+/*-------------LOGOUT BUTTONS SA POPUPS---------------*/
+.edit_or_logout button, .Logout-devices {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.edit_btn {
+    background-color: #47f7b7;
+    margin-right: 10px;
+}
+.edit_btn:hover, .profile-content.security button:hover {
+    background-color: #05cb82;
+}
+.logout_btn, .Logout-devices {
+    background-color: #ce5151;
+}
+.logout_btn:hover, .Logout-devices:hover {
+    background-color: #b71c1c;
+}
+/*-------------------------------------------------DESIGN SA DEVICES NGA TAB-----------------------------------------------*/
+/* .profile-content.devices p{
+    font-size: 12px;
+}
+
+.current-device, .other-devices {
+    display: flex;
+    align-items: center;
+}
+
+.current-device img, .other-devices img {
+    width: 50px;
+    height: auto;
+    margin: 10px 20px 5px 20px;
+} */
+/*-------------------------------------------------DESIGN SA SECURITY NGA TAB-----------------------------------------------*/
+/* .profile-content.security button {
+    background-color: #47f7b7;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+.profile-content.security button:hover {
+    background-color: #05cb82;
+}
+
+.SMS-Authentication {
+    display: flex;
+    align-items: center;
+}
+.SMS-Authentication p {
+    margin-left: 20px;
+    cursor: pointer;
+    color: #293c9e;
+}
+
+.profile-content.security p {
+    margin-bottom: 20px;
+    margin-top: 5px;
+    font-size: 13px;
+} */
+/*-------------------------------------------------DESIGN SA LANGUAGE NGA TAB-----------------------------------------------*/
+/* .Choose-language button {
+    background-color: #47f7b7;
+    width: 200px;
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-right: 30px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.profile-content.language p {
+    margin-bottom: 20px;
+}
+
+.lang-1, .lang-2, .lang-3 {
+    display: flex; 
+}
+
+.Choose-language button:hover {
+    background-color: #05cb82;
+} */
+/*-------------------------------------------------DESIGN SA UPDATES NGA TAB-----------------------------------------------*/
+.profile-content.updates {
+    font-size: 10px;
+    text-align: justify;
+}
+/*-------------------------------------------------DESIGN SA PRIVACY POLICY NGA TAB-----------------------------------------------*/
+
+.profile-content.policy {
+    font-size: 10px;
+    text-align: justify;
+}
+.profile-content.policy h1, .profile-content.policy h3 {
+    font-size: 15px;
+}
+
+
+
+/*--------------END OF POPUP------------------*/
+.OWTitle{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    background-image: url(Images/controller.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+}
+
+.gameListTxt {
+    transform: translate(-5px, -25px);
+    font-size: 22px;
+    font-weight: 555;
+}
+
+.categMainBox {
+    background-color: #120141; 
+    height: 350px;
+}
+
+.container2nd {
+    height: 300px; 
+    background-color: #140338;
+    position: absolute;
+    width: 85%;
+    transform: translate(113.30px, 1px);
+   border-radius: 30px;
+}
+
+.categBox {
+    margin: 20px;
+}
+
+.categTxt {
+    height: 20px; 
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    margin: 0px 0px 0px;
+    padding: 0px;
+
+}
+
+.rowsPo {
+    margin: 0px 10px 30px;
+}
+
+.categBu2n {
+    background-color:#47f7b7 ;
+    border: none;
+    height: 40px;
+    width: 200px;
+    border-radius: 9px;
+    font-weight: bold;
+}
+
+.bUtToNs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+.GenshinTitle {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    background-image: url(Images/controller.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 200px;
+    background-color: #120141;
+}
+
+.top5games {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 65px;
+}
+
+.btn5games {
+    width: 257px;
+    height: 50px;
+    font-weight: 650;
+    font-size: 25px;
+    border-radius: 13px;
+    background-color: #270d4e;
+    border: none;
+    color: white;
+}
+
+.in4mBox {
+    margin-bottom: 100px;
+}
+
+
+.OWTitle h1, .GenshinTitle h1 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.mainlist {
+    background-color: #0e0132;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin-top: 40px;
+    text-align: center;
+}
+.Open-World {
+    background-color: #270D4E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    width: 12em;
+    height: 2em;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+.OWGameList {
+    padding: 50px;
+    background-color: #0e0132;
+    display: flex;
+    justify-content: space-around; /* Change to space-around or center */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    margin-bottom: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.game1 {
+    padding: 30px;
+    text-align: justify;
+    align-items: center;
+    background-color: #180534;
+    color: white;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    width: 15em;
+    height: 35em;
+    margin-left: 1px; /* Adjust margin to control space between items */
+    margin-bottom: 50px;
+    transition: 0.5s;
+}
+
+.game1btn {
+    padding: 30px;
+    text-align: justify;
+    align-items: center;
+    border-radius: 10px;
+    width: 15em;
+    height: 5em;
+    margin-left: 1px; /* Adjust margin to control space between items */
+    margin-bottom: 50px;
+    transition: 0.5s;
+    background-color: none;
+}
+
+.game1:hover {
+    transform: scale(1.1);
+    background-color: #200747;
+    box-shadow: 0 0 20px #47f7b7;
+    border-style: none;
+    z-index: 2;
+}
+
+.game1 img {
+    max-width: 100%;
+    height: 180px;
+    margin-bottom: 10px;
+}
+
+.gametitle {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.nextSlide {
+    display: flex; /* Make .nextSlide a flex container */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 15px;
+    font-size: 40px;
+    color: #Fe5efc;
+}
+
+.bxs-circle {
+    font-size: 15px;
+}
+
+/*--------------------------------------KNOW MORE (GENSHIN)------------------------------------------*/
+.GenshinTitle {
+    margin-bottom: 50px;
+}
+.AboutTheGame {
+    background-color: #140337;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.AboutTheGame img {
+    width: 100%;
+    height: auto;
+}
+.AboutGenshin {
+    background-color: #47f7b7;
+    padding: 15px 50px;
+    border-radius: 10px;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+.descriptionOfGame {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding:  30px 60px;
+    color: white;
+    background-color: #270d4e;
+    justify-content: center;
+    align-items: center;
+}
+
+/*---------------KNOW MORE (GENSHIN) - PRICES-------------------*/
+.GPrices {
+    background-color: #140337;
+    display: flex;
+    justify-content: space-around; /* Change to space-around or center */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    padding: 40px;
+    margin-bottom: 50px;
+}
+
+.maintainance-container {
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #270D4E;
+    border-radius: 10px;
+    width: 500px;
+    height: 400px;
+    color: white;
+    margin: 50px;
+}
+
+.maintainance-container h3 {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.day-commisions {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    align-items: left;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.day-commisions h4 {
+    font-size: 20px;
+}
+.day-price {
+    display: flex;
+}
+.pesos20 {
+    color: #47f7b7;
+    font-size: 20px;
+}
+
+/*---------------KNOW MORE (GENSHIN) - PRICES-------------------*/
+.GBoosters {
+    background-color: #140337;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    margin-bottom: 50px;
+}
+
+.ListOfBoosters {
+    background-color: #140337;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.Top5-Boosters {
+    background-color: #47f7b7;
+    width: 500px;
+    padding: 15px 50px;
+    border-radius: 10px;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+.booster-container {
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #270D4E;
+    border-radius: 10px;
+    width: 500px;
+    height: 400px;
+    color: white;
+    margin: 50px;
+}
+
+.booster-container img {
+    width: 200px;
+    height: auto;
+}
+.name-profpic {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.name-profpic p {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.rating-star {
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.rating-star i {
+    color: gold;
+    margin-right: 5px;
+}
+
+.rating-star p {
+    margin-right: 50px;
+}
+
+/*--------------------------------------------CLIENT HOMEPAGE------------------------------------------------*/
+.HPBody {
+    background-image: url(/Images/ClientBg.PNG);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.mainContainer {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContainer h2 {
+    color: white;
+    margin: 30px;
+    font-size: 40px;
+    text-align: center;
+}
+/* General styling for the input field */
+.Search {
+    width: 400px;
+    max-width: 500px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 8px 20px;
+    margin-bottom: 30px;
+    transform: translate(550px, -8px);
+}
+.Search i {
+    font-size: 20px;
+}
+.Search-text {
+    background: transparent;
+    flex: 1;
+    border: none;
+    outline: none;
+}
+.Details-Services {
+    background-color: #1c006a;
+    width: 100%;
+    max-width: 1200px;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.Details-Services h3 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.Order-Status {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.profpic_status img {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.profpic_status {
+    display: flex;
+    color: white;
+    font-size: 13px;
+}
+
+.In-progress {
+    display: flex;
+}
+.Status_update {
+    background-color: #5aa388;
+    padding: 20px 5px 5px 15px;
+    border-radius: 10px;
+    width: 500px;
+    margin: 20px;
+}
+
+.In-progress p {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.fenk {
+    margin-left: 15px;
+    color: #Fe5efc;
+}
+
+.Name-rating {
+    display: flex;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.Name-rating i {
+    color: gold;
+    font-size: 15px;
+    margin-left: 10px;
+}
+.Intro-booster {
+    color: #000;
+}
+
+.Status_description {
+    display: flex;
+    flex-direction: column;
+}
+.Know-More {
+    color: white;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 400px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.Know-More:hover {
+    color: #47f7b7;
+    text-decoration: underline;
+}
+
+.Order-List {
+    background-color: #452861;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 15px;
+    color: white;
+    margin-bottom: 40px; /* Center the container */
+}
+
+.alignList-See {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.alignList-See h4 {
+    font-size: 25px;
+}
+
+.Order-Detail {
+    padding: 10px;
+    background-color: #6A4480;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto; /* Enable horizontal scrolling for small screens */
+}
+
+.Order-Detail table {
+    width: 100%;
+    max-width: 100%;
+
+    margin: auto; /* Center the table */
+}
+
+.Order-Detail th, .Order-Detail td {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.Order-Detail th {
+    background-color: #6A4480; /* Different background color for header */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Order-Detail th, .Order-Detail td {
+        padding: 10px 5px; /* Reduce padding for smaller screens */
+        font-size: 12px; /* Reduce font size for smaller screens */
+    }
+    
+    .Order-Detail table {
+        display: block; /* Ensure table takes full width */
+    }
+}
+
+/*--------------------------------------------CLIENT ORDERS------------------------------------------------*/
+.ClientBody {
+    background-image: url(/Images/ClientBg.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.Orders-main {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.Orders-main h1 {
+    color: #C1E5FF;
+    margin: 40px 0 30px 0;
+}
+
+.CombinationSaBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Status-Add {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.Status-box, .Add-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #1c006a;
+    border-radius: 10px;
+    width: 500px;
+    height: auto;
+    padding: 25px;
+}
+
+.Add-box {
+    text-decoration: none;
+}
+
+.Status-box {
+    margin-right: 200px;
+}
+.Angorderstatus {
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 17px;
+}
+
+.Angorderstatus p {
+    margin-left: 15px;
+    font-weight: 700;
+    color: #Fe5efc;
+}
+
+.AngboxsudsaStatus-box img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+.AngboxsudsaStatus-box {
+    margin-top: 17px;
+    background-color: #5aa388;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.AngboxsudsaStatus-box p {
+    margin-bottom: 10px;
+}
+.AngboxsudsaStatus-box h6 {
+    color: white;
+    font-weight: 400;
+    font-size: 10px;
+}
+
+.Add-box h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.Add-box i {
+    font-size: 50px;
+}
+
+.FordaCircle {
+    border-radius: 100%;
+    background-color: #5128BF;
+    padding: 15px;
+}
+
+/*--------------------------------------------CLIENT BOOSTER PROFILE------------------------------------------------*/
+.Client-BPBody, .Client-BoosterBody {
+    background-image: url(/Images/ClientBg.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Client-BPMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.Client-BPMain h1 {
+    color: #C1E5FF;
+    margin: 40px 0 30px 0;
+}
+
+.ProfileSaBooster img {
+    width: 100px;
+    height: auto;
+}
+
+.AngDakoBlueBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #1c006a;
+    padding: 20px 20px 20px 0;
+    border-radius: 20px;
+    max-width: 1300px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.ProfileSaBooster {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    background-color: #452861;
+    padding: 20px 0 20px 20px;
+    border-radius: 10px;
+    margin: 30px;
+}
+
+.AlignInfo-Req {
+    background-color: #6A4480;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px 15px 50px;
+    border-radius: 20px 0 0 20px;   
+}
+
+.MgaInformationSaBooster {
+    display: flex;
+    flex-direction: column;
+}
+
+.Booster-credentials {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.Booster-rating {
+    display: flex;
+    font-weight: 600;
+    color: #fff;
+    /* margin-bottom: 5px; */
+}
+
+.Booster-rating i {
+    color: gold;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.booster-info {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 20px; /* Adjust spacing as needed */
+    color: #FFFFFF; /* Text color */
+    padding-top: 10px;
+    width: fit-content; /* Adjust width as needed */
+    font-size: 12px;
+}
+
+.Binfo-label {
+    text-align: left;
+    font-weight: 300;
+    font-size: 2;
+}
+
+.Binfo-value {
+    text-align: left;
+}
+
+.Request-Boost {
+    display: flex;
+    max-height: 30px;
+    height: 100%;
+}
+
+.Request-Boost button {
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #47f7b7;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+/* Review Form and Reviews List Styling */
+#reviewForm {
+    background-color: #1c006a;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    color: white;
+    display: none; /* Initially hidden */
+}
+
+#reviewForm h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#reviewForm label {
+    display: block;
+    margin-top: 10px;
+}
+
+#reviewForm select, #reviewForm textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+}
+
+#reviewForm button {
+    display: block;
+    background-color: #47f7b7;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px auto;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#reviewForm button:hover {
+    background-color: #05cb82;
+}
+
+/* Styling for the reviews */
+.Reviews-Box {
+    background-color: #1c006a;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    color: white;
+}
+
+.Reviews-Box h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.review {
+    background-color: #0e0132;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.review p {
+    margin: 5px 0;
+}
+
+/*--------------------------------------------CLIENT ADD ORDER PAGE------------------------------------------------*/
+
+.BigBlueBox {
+    background-color: #1c006a;
+    border-radius: 20px;
+    width: 80%;
+    padding: 30px;
+    margin: 0 auto; /* Center the box horizontally */
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.BMSearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.BMSearch-text {
+    width: 60%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+}
+
+.bx-search {
+    position: relative;
+    left: -30px;
+    cursor: pointer;
+}
+
+h1, h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.filter-games {
+    padding: 20px;
+}
+
+.filter-games p {
+    color: white;
+    font-size: 18px;
+}
+
+.A-Buttons, .B-Buttons {
+    background-color: #0e0132;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-games button {
+    background-color: #47f7b7;
+    width: calc(20% - 10px); /* Five buttons per row with spacing */
+    height: 50px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.filter-games button:hover {
+    background-color: #05cb82;
+}
+
+.BigBlueBox2 {
+    background-color: #1c006a;
+    border-radius: 20px;
+    width: 80%;
+    padding: 30px;
+    margin: 0 auto; /* Center the box horizontally */
+    color: white; /* Ensure text color is white */
+    margin-bottom: 40px;
+}
+
+.BigBlueBox2 h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.avail-boosters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between booster-1 divs */
+    justify-content: center; /* Center the content */
+}
+
+.booster-1 {
+    background-color: #0e0132;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px; /* Fixed width for consistency */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.booster-1 a {
+    text-decoration: none;
+    color: white;
+}
+
+.star1-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the rating within the booster */
+    margin-bottom: 10px;
+}
+
+.star1-rating i {
+    color: #f7b733; /* Star color */
+    margin-right: 5px;
+}
+
+.star1-rating p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.booster-1 img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.booster-1 p {
+    margin: 5px 0;
+}
+/*--------------------------------------------FOOTER------------------------------------------------*/
+
+footer{
+    position: sticky;
+    width: 100%;
+    color: #fff;
+    font-size: 13px;
+    text-align: justify;
+    line-height: 20px;
+    padding: 80px 0 30px;
+    background: linear-gradient(to right, #00093c, #0E0132);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.row-footer{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col-footer{
+    flex-basis: 20%;
+    padding: 10px;
+}
+
+.col-footer:nth-child(2),.col-footer:nth-child(3){
+    flex-basis: 15%;
+}
+
+.col-footer h3{
+    margin-bottom: 40px;
+    position: relative;
+}
+.col-footer h4{
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.Footerlogo{
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.email-id{
+    width: 79%;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.col-footer ul li{
+    list-style: none;
+    margin-bottom: 12px;
+    padding-left: 0px;
+    padding-top: 0px;
+}
+
+.col-footer ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.col-footer form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+.col-footer .fa-envelope{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.col-footer form input{
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    border: 0;
+    outline: none;
+}
+
+::placeholder {
+  color: #fff;
+  opacity: 0.5; 
+}
+
+.col-footer form button{
+    background: transparent;
+    color: #fff;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.col-footer form button .fa{
+    font-size: 16px;
+    color: #ccc;
+    
+}
+
+footer p{
+    color: #fff;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 0px;
+}
+
+.icons .bx{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.copyright{
+    text-align: center;
+}
+
+.underline-office{
+    width: 18%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+
+.underline-links{
+    width: 15%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+
+.underline-news{
+    width: 23%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+
+.underline-office span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+
+.underline-links span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+
+.underline-news span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+
+@keyframes moving{
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+
+@media(max-width: 700px){
+    .row{
+        flex-direction: row;
+        
+    }
+    
+    .footer{
+        bottom: unset;
+    }
+    
+    .col-footer{
+        flex-basis: 100%;
+    }
+    
+    .col-footer:nth-child(2), .col-footer:nth-child(3){
+        flex-basis: 100%;
+    }
+
+}
+
+@media(max-width: 911px){
+ .contact-cover{
+        background: #03a9f5;
+    }
+    
+    .contactUs{
+        padding: 20px;
+    }
+    
+    .box{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "form" 
+            "info" 
+            "map";
+    }
+
+    .formBox .row50{
+        display: flex;
+        column-gap: 0;
+        flex-direction: column;
+    }
+    
+    .inputBox{
+        width: 100%;
+    }
+    
+    .contact{
+        padding: 30px;
+    }
+    
+    .map{
+        min-height: 300px;
+        padding: 0;
+    }
+}
