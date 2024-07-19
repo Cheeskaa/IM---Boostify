@@ -1,39 +1,3 @@
-<?php
-session_start();
-
-
-// Check if the user is logged in
-if (!isset($_SESSION['username'])) {
-    // If the user is not logged in, redirect to the login page
-    header("Location: ../LLSPage/login.php");
-    exit;
-}
-
-// $game_name = "";
-// $game_type = "";
-
-// $errorMessage = "";
-
-// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-//     $game_name = $_POST['game_name'];
-//     $game_type = $_POST['game_type'];
-
-//     do {
-//         if (empty($game_name) || empty($game_type)) {
-//             $errorMessage = "All the fields are required";
-//             break;
-//         }
-
-//         //add new game
-
-//     } while (false);
-// }
-
-
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -120,11 +84,13 @@ if (!isset($_SESSION['username'])) {
         <div class="main gamelist">
             <h2>GAME LIST</h2>
             <h3>Add Game</h3>
-            <form id="gameForm" method="POST">
-                <input type="text" id="gameName" placeholder="Game Name" required>
-                <input type="text" id="gameType" placeholder="Game Type" required>
-                <button type="submit">Add Game</button>
+            <form id="gameForm" method="POST" action="add.php">
+                <input type="text" name="gameName" id="gameName" placeholder="Game Name" required>
+                <input type="text" name="gameType" id="gameType" placeholder="Game Type" required>
+                 <button type="submit">Add Game</button>
             </form>
+
+
             <table id="gameTable">
                 <thead>
                     <tr>
@@ -145,6 +111,30 @@ if (!isset($_SESSION['username'])) {
                         die("Invalid query: " . $conn->error);
                     }
                     ?> -->
+                    <?php
+                    include("../LLSPage/connections.php");
+
+                    $sql = "SELECT * FROM games_t";
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                    echo "<tr>
+                    <td>" . $row["game_id"] . "</td>
+                    <td>" . $row["game_name"] . "</td>
+                    <td>" . $row["game_type"] . "</td>
+                    <td>
+                    <form method='post' action='delete_game.php'>
+                    <input type='hidden' name='game_id' value='" . $row["game_id"] . "'>
+                    <button type='submit'>Delete</button>
+                </form>
+            </td>
+            </tr>";
+        }
+    } else {
+        echo "<tr><td colspan='4'>No games found</td></tr>";
+    }
+    ?>
                 </tbody>
             </table>
         </div> 
