@@ -47,19 +47,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         menuIcon.classList.remove('active');
     });
 
-    // Toggle menu dropdown
-    // menuIcon.addEventListener('click', (e) => {
-    //     e.stopPropagation();
-    //     if (menuDropdown.style.display === 'none' || menuDropdown.style.display === '') {
-    //         menuDropdown.style.display = 'block';
-    //         menuIcon.classList.add('active');
-    //     } else {
-    //         menuDropdown.style.display = 'none';
-    //         menuIcon.classList.remove('active');
-    //     }
-    //     notificationDropdown.style.display = 'none';
-    //     bellIcon.classList.remove('active');
-    // });
 
     // Close dropdowns when clicking outside
     document.addEventListener('click', (event) => {
@@ -67,32 +54,56 @@ document.addEventListener('DOMContentLoaded', (event) => {
             notificationDropdown.style.display = 'none';
             bellIcon.classList.remove('active');
         }
-        // if (!menuIcon.contains(event.target) && !menuDropdown.contains(event.target)) {
-        //     menuDropdown.style.display = 'none';
-        //     menuIcon.classList.remove('active');
-        // }
     });
 });
 
 /*----------------------------SA ADD ORDER PAGE - FILTER BOOSTER---------------------------------*/
 document.addEventListener("DOMContentLoaded", () => {
     const buttons = document.querySelectorAll(".filter-games button");
-    const boosters = document.querySelectorAll(".booster-1");
+    const boostersContainer = document.querySelector(".avail-boosters");
 
-    buttons.forEach(button => {
-        button.addEventListener("click", () => {
-            const game = button.dataset.game;
-            
-            boosters.forEach(booster => {
-                if (booster.dataset.games.includes(game)) {
-                    booster.style.display = "block";
-                } else {
-                    booster.style.display = "none";
-                }
+    // Fetch boosters data from the server
+    fetch('fetch_boosters.php')
+        .then(response => response.json())
+        .then(data => {
+            // Generate the HTML for each booster
+            data.forEach(booster => {
+                const boosterDiv = document.createElement('div');
+                boosterDiv.classList.add('booster-1');
+                boosterDiv.dataset.games = booster.expertise.toLowerCase(); // Store expertise in lowercase for easier comparison
+                boosterDiv.innerHTML = `
+                    <a href="#">
+                        <div class="star1-rating">
+                            <i class='bx bxs-star'></i><p>${booster.rating}</p>
+                        </div>
+                        <img src="Images/profile2.svg" alt="">
+                        <p>${booster.username}</p>
+                        <p>${booster.expertise}</p>
+                    </a>
+                `;
+                boostersContainer.appendChild(boosterDiv);
             });
-        });
-    });
+
+            // Add event listeners for filtering
+            buttons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const game = button.dataset.game.toLowerCase(); // Convert game to lowercase for comparison
+                    const boosters = document.querySelectorAll(".booster-1");
+
+                    boosters.forEach(booster => {
+                        if (booster.dataset.games.includes(game)) {
+                            booster.style.display = "block";
+                        } else {
+                            booster.style.display = "none";
+                        }
+                    });
+                });
+            });
+        })
+        .catch(error => console.error('Error fetching boosters:', error));
 });
+
+
 
 /*----------------------------SA BOOSTER PROFILE - ADD OG REVIEW---------------------------------*/
 function toggleReviewForm() {
