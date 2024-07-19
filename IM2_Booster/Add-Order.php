@@ -30,9 +30,6 @@ if (!isset($_SESSION['username'])) {
             <i class='bx bx-arrow-back'></i>
             <div class="tab_box">
                 <button class="tab_btn active"><i class='bx bx-user'></i>My Profile</button>
-                <!-- <button class="tab_btn"><i class='bx bxs-devices'></i>Devices</button>
-                <button class="tab_btn"><i class='bx bxs-check-shield'></i>Security</button>
-                <button class="tab_btn"><i class='bx bxs-message-rounded-detail'></i>Language</button> -->
                 <button class="tab_btn"><i class='bx bx-revision'></i>Updates</button>
                 <button class="tab_btn"><i class='bx bx-detail'></i>Privacy Policy</button>
             </div>
@@ -42,94 +39,28 @@ if (!isset($_SESSION['username'])) {
                     <h2>MY PROFILE</h2>
                     <div class="profile-container">
                         <div class="profpic">
-                            <img src="Images/profile.svg" alt="">
+                            <img src="Images/profile2.svg" alt="">
                             <p>Profile Picture</p>
                         </div>
                         <div class="credentials">
                             <div class="name-address">
                                 <h3>CLIVE OWEN N. DELIMA</h3>
-                                <p>CEBU CITY, CEBU, PhILIPPINES</p>
                             </div>
                             <div class="user-info">
                                 <div class="info-label">User ID:</div>
                                 <div class="info-value">21101683</div>
                             
-                                <div class="info-label">Date of Birth:</div>
-                                <div class="info-value">Friday, July 16, 2004</div>
-                            
                                 <div class="info-label">Email Address:</div>
                                 <div class="info-value">delimacliveowen@gmail.com</div>
-                            
-                                <div class="info-label">Contact Number:</div>
-                                <div class="info-value">099246656</div>
                             </div>
                         </div>                      
                     </div>
                     <div class="edit_or_logout">
-                        <button class="edit_btn">Edit User Profile</button>
                         <form action="LLSPage/logout.php" method="post" style="display: inline;">
                             <button type="submit" class="logout_btn">Log Out</button>
                         </form>
                     </div>                   
                 </div>
-<!--------------------------------------------------------------DEVICES------------------------------------------------------------------>                
-                <!-- <div class="profile-content devices">
-                    <h2>DEVICES</h2>
-                    <p>Here are all the devices that are currently logged in with your Boostify account. You can log out of each one individually or all other devices.</p>
-                    <p><br>If you see an entry you don’t recognize, log out of that device and change your ISMIS account password immediately.</p>
-                    <p><br>CURRENT DEVICE</p>
-                    <div class="current-device">
-                        <img src="Images/Device-computer-icon.png" alt="">
-                        <p><b>Asus Zenbook 13</b><br>Cebu City, Province of Cebu, Central Visayas, Philippines</p>
-                    </div>
-                    <p><br>OTHER DEVICES</p>
-                    <div class="other-devices">
-                        <img src="Images/Device-computer-icon.png" alt="">
-                        <p><b>Acer Aspire 5</b><br>Danao City, Province of Cebu, Central Visayas, Philippines<br>Active 5 Days Ago.</p>
-                        </div>
-                        <p><br>LOG OUT TO ALL KNOWN DEVICES<br>You’ll have to log back in on all logged out devices.</p>
-                    <button class="Logout-devices">Log Out All Known Devices</button>
-                </div> -->
-<!--------------------------------------------------------------SECURITY------------------------------------------------------------------>                
-                <!-- <div class="profile-content security">
-                    <h2>SECURITY</h2>
-                    <p>Want to update your password?</p>
-                    <button class="change-password">Change Password</button>
-                    <p><b>AUTHENTICATION</b><br>Register a security key</p>
-                    <button class="enable-btn">Enable</button>
-                    <p><b>SMS BACKUP AUTHENTICATION</b><br>Add your current phone as backup MFA method in case you lose access to your backup codes.
-                        <br>Your current phone number is: *********0911.</p>
-                    <div class="SMS-Authentication">
-                        <button class="SMS-btn">Enable SMS Authentication</button>
-                        <p>Change Phone Number?</p>
-                    </div>
-                    
-                </div> -->
-<!--------------------------------------------------------------LANGUAGE------------------------------------------------------------------>
-                <!-- <div class="profile-content language">
-                    <h2>LANGUAGE</h2>
-                    <p>Select a Language</p>
-                    <div class="Choose-language">
-                        <div class="lang-1">
-                            <button>English, US</button>
-                            <button>English, UK</button>
-                            <button>Español</button>
-                            <button>Français</button>
-                        </div>
-                        <div class="lang-2">
-                            <button>Italiano</button>
-                            <button>Русский</button>
-                            <button>हिंदी</button>
-                            <button>แบบไทย</button>    
-                        </div>
-                        <div class="lang-3">
-                            <button>官话</button>
-                            <button>日本語</button>
-                            <button>臺灣國語</button>
-                            <button>한국인</button>    
-                        </div>
-                    </div>
-                </div> -->
 <!--------------------------------------------------------------UPDATE------------------------------------------------------------------>
                 <div class="profile-content updates">
                     <h2>UPDATES</h2>
@@ -162,7 +93,7 @@ if (!isset($_SESSION['username'])) {
                 <div class="profile-content policy">
                     <h2>PRIVACY POLICY</h2>
                     <h1>Boostify Privacy Policy</h1>
-        <p><br><b>Effective Date:</b> [Insert Date]</p>
+        <p><br><b>Effective Date:</b> 07/10/2024</p>
         <p>Welcome to Boostify, your trusted game boosting service. At Boostify, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, and safeguard your information when you use our website and services.</p>
         
         <h1><br>Information We Collect</h1>
@@ -240,23 +171,13 @@ if (!isset($_SESSION['username'])) {
             <div class="nav-home"><a class="btn" href="ClientHomePage.php"><i class='bx bxs-home'></i><p>HOME</p></a></div>
             <div class="nav-order"><a class="btn active" href="ClientOrders.php"><i class='bx bxs-notepad'></i><p>ORDERS</p></a></div>
             <div class="nav-booster"><a class="btn" href="#"><i class='bx bxs-game'></i><p>GAME LIST</p></a></div>
-            <!-- <div class="nav-menu">
-                <i class='bx bx-menu' id="menu-icon"></i><p>MENU</p>
-                <div class="menu_dd" id="menu_dd">
-                    <ul class="menu_ul">
-                        <li><a href="#"><p>Work With Us</p></a></li>
-                        <li><a href="#"><p>Settings</p></a></li>
-                        <li><a href="#"><p>Language</p></a></li>
-                    </ul>
-                </div>
-            </div> -->
             <div class="notificationBell">
                 <i class='bx bxs-bell' id="bell-icon"></i>
                 <div class="notification_dd" id="notification_dd">
                     <ul class="notification_ul">
                         <li class="successful starbucks">
                             <div class="notify_icon">
-                                <span class="icon"><img src="Images/profile.svg" alt=""></span>
+                                <span class="icon"><img src="Images/profile2.svg" alt=""></span>
                             </div>
                             <div class="notify_data">
                                 <div class="notify_title"><p>Lorem ipsum dolor sit.</p></div>
@@ -282,7 +203,7 @@ if (!isset($_SESSION['username'])) {
             </div>
             
             <div class="profile">
-                <img src="Images/profile.svg" alt="profile_pic">
+                <img src="Images/profile2.svg" alt="profile_pic">
             </div>
         </div>
     </nav>
@@ -303,51 +224,17 @@ if (!isset($_SESSION['username'])) {
                 <button data-game="DOTA 2">DOTA 2</button>
                 <button data-game="MOBILE LEGENDS">MOBILE LEGENDS</button>
             </div>
-            <!-- <p>B</p>
-            <div class="B-Buttons">
-                <button data-game="VALORANT">VALORANT</button>
-                <button data-game="GENSHIN IMPACT">GENSHIN IMPACT</button>
-                <button data-game="LEAGUE OF LEGENDS">LEAGUE OF LEGENDS</button>
-                <button data-game="COUNTER STRIKE 2">COUNTER STRIKE 2</button>
-                <button data-game="APEX LEGENDS">APEX LEGENDS</button>
-                <button data-game="DOTA 2">DOTA 2</button>
-                <button data-game="MOBILE LEGENDS">MOBILE LEGENDS</button>
-            </div> -->
         </div>
     </div>
     <div class="BigBlueBox2">
         <h1>AVAILABLE BOOSTERS</h1>
-        <div class="avail-boosters">
-            <div class="booster-1" data-games="VALORANT">
-                <a href="#">
-                    <div class="star1-rating">
-                        <i class='bx bxs-star'></i><p>4.8</p>
-                    </div>
-                    <img src="Images/profile.svg" alt="">
-                    <p>Jolie</p>
-                    <p>Genshin, Valorant</p>
-                </a>
-            </div>
-            <div class="booster-1" data-games="DOTA 2 LEAGUE OF LEGENDS">
-                <div class="star1-rating">
-                    <i class='bx bxs-star'></i><p>4.9</p>
-                </div>
-                <img src="Images/profile.svg" alt="">
-                <p>Alex</p>
-                <p>League of Legends, Dota 2</p>
-            </div>
-            <div class="booster-1" data-games="APEX LEGENDS">
-                <div class="star1-rating">
-                    <i class='bx bxs-star'></i><p>4.7</p>
-                </div>
-                <img src="Images/profile.svg" alt="">
-                <p>Sam</p>
-                <p>Apex Legends</p>
-            </div>
-            <!-- Add more booster-1 divs as needed -->
+        <div class="avail-boosters" id="avail-boosters">
+            <!-- Booster data will be inserted here dynamically -->
         </div>
     </div>
 </main>
+<script src="script.js"></script>
+
 
     <!--------------------------------------FOOTER------------------------------------------->
     <footer>
