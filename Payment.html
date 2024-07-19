@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Payment.css">
+    <title>Responsive Payment Gateway Form</title>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="popup">
+        <p>Payment through GCash was successful!</p>
+        <button onclick="hidePopup()">Close</button>
+    </div>
+    <div class="container">
+        <form class="payment-form" onsubmit="handleSubmit(event)">
+            <h2 style="color: #f13ef1;">Payment Details</h2>
+            <div class="form-group">
+                <label for="cardholder-name">Name</label>
+                <input type="text" id="cardholder-name" name="cardholder-name" required>
+            </div>
+            <div class="form-group">
+                <label for="card-number">Amount</label>
+                <input type="text" id="card-number" name="card-number" required>
+            </div>
+            <div class="form-group">
+                <label for="expiry-date">Card Number</label>
+                <input type="text" id="expiry-date" name="expiry-date" required>
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" required>
+            </div>
+            <button type="submit" style=" background-color: #47f7b7; color: black;border-radius: 25px;">Submit Payment</button>
+            <button type="button" onclick="goBack()" style="background-color: #ac3dac; 
+  border-radius: 25px;">Back</button>
+            <div class="alternate-payment">
+                <p>Or pay with:</p>
+                <a href="#" onclick="handleGCashPayment(event)">GCash</a> | 
+                <a href="https://www.paypal.com" target="_blank">PayPal</a>
+            </div>
+        </form>
+    </div>
+    <script src="Payment.js"></script>
+</body>
+</html>
