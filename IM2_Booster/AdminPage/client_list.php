@@ -1,14 +1,26 @@
 <?php
-session_start();
+include("../LLSPage/connections.php");
 
+// Delete client if delete request is sent
+if (isset($_POST['delete_id'])) {
+    $delete_id = $_POST['delete_id'];
+    $delete_sql = "DELETE FROM users_t WHERE user_id = $delete_id";
 
-// Check if the user is logged in
-if (!isset($_SESSION['username'])) {
-    // If the user is not logged in, redirect to the login page
-    header("Location: ../LLSPage/login.php");
-    exit;
+    if ($conn->query($delete_sql) === TRUE) {
+        echo "Client deleted successfully";
+        // You can redirect or refresh the page after deletion if needed
+    } else {
+        echo "Error deleting client: " . $conn->error;
+    }
 }
 
+// Fetch client list
+$sql = "SELECT user_id, username, email FROM users_t";
+$result = $conn->query($sql);
+
+if (!$result) {
+    die("Invalid query: " . $conn->error);
+}
 ?>
 
 
@@ -101,25 +113,21 @@ if (!isset($_SESSION['username'])) {
                     </tr>
                 </thead>
                 <tbody>
-                    <?php
-                    include("../LLSPage/connections.php");
-
-                    $sql = "SELECT user_id, username, email FROM users_t";
-                    $result = $conn->query($sql);
-
-                    if (!$result) {
-                        die("Invalid query: " . $conn->error);
-                    }
-
-                    while($row = $result->fetch_assoc()) {
-                        echo "<tr>
-                        <td>" . $row["user_id"] . "</td>
-                        <td>" . $row["username"] . "</td>
-                        <td>" . $row["email"] . "</td>
-                        <td><button>Delete</button></td>
-                        </tr>";
-                    }
-                    ?>
+                <?php
+            while($row = $result->fetch_assoc()) {
+                echo "<tr>
+                <td>" . $row["user_id"] . "</td>
+                <td>" . $row["username"] . "</td>
+                <td>" . $row["email"] . "</td>
+                <td>
+                    <form method='post' action=''>
+                        <input type='hidden' name='delete_id' value='" . $row["user_id"] . "'>
+                        <button type='submit'>Delete</button>
+                    </form>
+                </td>
+                </tr>";
+            }
+            ?>
                 </tbody>
             </table>
         </div> 
