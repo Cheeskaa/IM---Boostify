@@ -71,12 +71,6 @@
                         <div>Sign Out</div>
                     </a>
                 </li>
-                <!-- <li id="help">
-                    <a href="help.html">
-                        <i class='bx bxs-help-circle'></i>
-                        <div>Help</div>
-                    </a>
-                </li> -->
             </ul>
         </div>
         <div class="main booster-list">
@@ -103,7 +97,7 @@
                         die("Invalid query: " . $conn->error);
                     }
 
-                    while($row = $result->fetch_assoc()) {
+                    while ($row = $result->fetch_assoc()) {
                         echo "<tr>
                         <td>" . $row["booster_id"] . "</td>
                         <td>" . $row["username"] . "</td>
@@ -115,41 +109,11 @@
                                 <input type='hidden' name='booster_id' value='" . $row["booster_id"] . "'>
                                 <button type='submit'>Delete</button>
                             </form>
-                            <button onclick='openEditForm(" . $row["booster_id"] . ", \"" . $row["username"] . "\", \"" . $row["email"] . "\", \"" . $row["rating"] . "\", \"" . $row["expertise"] . "\")'>Edit</button>
                         </td>
                         </tr>";
                     }
                     ?>
                 </tbody>
             </table>
-
-            <div id="editFormContainer" style="display:none;">
-                <h3>Edit Booster</h3>
-                <form id="editBoosterForm" method="POST" action="edit_booster.php">
-                    <input type="hidden" name="booster_id" id="editBoosterId">
-                    <input type="text" name="username" id="editUsername" placeholder="Username" required>
-                    <input type="email" name="email" id="editEmail" placeholder="Email" required>
-                    <input type="text" name="rating" id="editRating" placeholder="Rating" required>
-                    <input type="text" name="expertise" id="editExpertise" placeholder="Expertise" required>
-                    <button type="submit">Update Booster</button>
-                    <button type="button" onclick="closeEditForm()">Cancel</button>
-                </form>
-            </div>
-        </div> 
-    </div>
-    <script>
-        function openEditForm(id, username, email, rating, expertise) {
-            document.getElementById('editBoosterId').value = id;
-            document.getElementById('editUsername').value = username;
-            document.getElementById('editEmail').value = email;
-            document.getElementById('editRating').value = rating;
-            document.getElementById('editExpertise').value = expertise;
-            document.getElementById('editFormContainer').style.display = 'block';
-        }
-
-        function closeEditForm() {
-            document.getElementById('editFormContainer').style.display = 'none';
-        }
-    </script>
 </body>
 </html>
