@@ -1,7 +1,5 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +11,6 @@
     <link rel="stylesheet" href="AdminStyles.css">
     <title>BOOSTER LIST | Admin Page</title>
 </head>
-
 <body>
     <div class="container">
         <div class="topbar">
@@ -113,15 +110,46 @@
                         <td>" . $row["email"] . "</td>
                         <td>" . $row["rating"] . "</td>
                         <td>" . $row["expertise"] . "</td>
-                        <td><button>Delete</button></td>
+                        <td>
+                            <form method='post' action='delete_booster.php' style='display:inline-block;'>
+                                <input type='hidden' name='booster_id' value='" . $row["booster_id"] . "'>
+                                <button type='submit'>Delete</button>
+                            </form>
+                            <button onclick='openEditForm(" . $row["booster_id"] . ", \"" . $row["username"] . "\", \"" . $row["email"] . "\", \"" . $row["rating"] . "\", \"" . $row["expertise"] . "\")'>Edit</button>
+                        </td>
                         </tr>";
                     }
                     ?>
                 </tbody>
             </table>
+
+            <div id="editFormContainer" style="display:none;">
+                <h3>Edit Booster</h3>
+                <form id="editBoosterForm" method="POST" action="edit_booster.php">
+                    <input type="hidden" name="booster_id" id="editBoosterId">
+                    <input type="text" name="username" id="editUsername" placeholder="Username" required>
+                    <input type="email" name="email" id="editEmail" placeholder="Email" required>
+                    <input type="text" name="rating" id="editRating" placeholder="Rating" required>
+                    <input type="text" name="expertise" id="editExpertise" placeholder="Expertise" required>
+                    <button type="submit">Update Booster</button>
+                    <button type="button" onclick="closeEditForm()">Cancel</button>
+                </form>
+            </div>
         </div> 
     </div>
-    <script src="AdminJS.js"></script>
-</body>
+    <script>
+        function openEditForm(id, username, email, rating, expertise) {
+            document.getElementById('editBoosterId').value = id;
+            document.getElementById('editUsername').value = username;
+            document.getElementById('editEmail').value = email;
+            document.getElementById('editRating').value = rating;
+            document.getElementById('editExpertise').value = expertise;
+            document.getElementById('editFormContainer').style.display = 'block';
+        }
 
+        function closeEditForm() {
+            document.getElementById('editFormContainer').style.display = 'none';
+        }
+    </script>
+</body>
 </html>
