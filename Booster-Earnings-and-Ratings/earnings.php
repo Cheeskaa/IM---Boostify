@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,26 +31,26 @@
         </div>        
         <div class="sidebar">
             <ul>
-                <li id="booster_home">
-                    <a href="booster_home.html">
+                <li id="bhome">
+                    <a href="bhome.php">
                         <i class='bx bxs-user'></i>
                         <div>Home</div>
                     </a>
                 </li>
-                <li id="order">
-                    <a href="order.html">
+                <li id="orderreq">
+                    <a href="orderreq.php">
                         <i class='bx bxs-server'></i>
                         <div>Order Requests</div>
                     </a>
                 </li>
                     <li id="earnings">
-                    <a href="earnings.html">
+                    <a href="earnings.php">
                         <i class='bx bxs-dollar-circle'></i>
                         <div>Earnings</div>
                     </a>
                 </li>
                 <li id="ratings">
-                    <a href="ratings.html">
+                    <a href="ratings.php">
                         <i class='bx bxs-star-half'></i>
                         <div>Ratings</div>
                     </a>
