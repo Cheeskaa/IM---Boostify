@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +11,6 @@
     <link rel="stylesheet" href="AdminStyles.css">
     <title>GAME LIST | Admin Page</title>
 </head>
-
 <body>
     <div class="container">
         <div class="topbar">
@@ -28,7 +26,7 @@
             <div class="user">
                 <img src="../Images/user.png" alt="">
             </div>
-        </div>        
+        </div>
         <div class="sidebar">
             <ul>
                 <li id="clientList">
@@ -87,9 +85,8 @@
             <form id="gameForm" method="POST" action="add.php">
                 <input type="text" name="gameName" id="gameName" placeholder="Game Name" required>
                 <input type="text" name="gameType" id="gameType" placeholder="Game Type" required>
-                 <button type="submit">Add Game</button>
+                <button type="submit">Add Game</button>
             </form>
-
 
             <table id="gameTable">
                 <thead>
@@ -101,16 +98,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- <?php
-                    include("../LLSPage/connections.php");
-
-                    $sql = "SELECT * FROM games_t";
-                    $result = $conn->query($sql);
-
-                    if (!$result) {
-                        die("Invalid query: " . $conn->error);
-                    }
-                    ?> -->
                     <?php
                     include("../LLSPage/connections.php");
 
@@ -118,28 +105,50 @@
                     $result = $conn->query($sql);
 
                     if ($result->num_rows > 0) {
-                    while($row = $result->fetch_assoc()) {
-                    echo "<tr>
-                    <td>" . $row["game_id"] . "</td>
-                    <td>" . $row["game_name"] . "</td>
-                    <td>" . $row["game_type"] . "</td>
-                    <td>
-                    <form method='post' action='delete_game.php'>
-                    <input type='hidden' name='game_id' value='" . $row["game_id"] . "'>
-                    <button type='submit'>Delete</button>
-                </form>
-            </td>
-            </tr>";
-        }
-    } else {
-        echo "<tr><td colspan='4'>No games found</td></tr>";
-    }
-    ?>
+                        while($row = $result->fetch_assoc()) {
+                            echo "<tr>
+                            <td>" . $row["game_id"] . "</td>
+                            <td>" . $row["game_name"] . "</td>
+                            <td>" . $row["game_type"] . "</td>
+                            <td>
+                                <form method='post' action='delete_game.php' style='display:inline-block;'>
+                                    <input type='hidden' name='game_id' value='" . $row["game_id"] . "'>
+                                    <button type='submit'>Delete</button>
+                                </form>
+                                <button onclick='openEditForm(" . $row["game_id"] . ", \"" . $row["game_name"] . "\", \"" . $row["game_type"] . "\")'>Edit</button>
+                            </td>
+                            </tr>";
+                        }
+                    } else {
+                        echo "<tr><td colspan='4'>No games found</td></tr>";
+                    }
+                    $conn->close();
+                    ?>
                 </tbody>
             </table>
-        </div> 
-    </div>
-    <script src="AdminJS.js"></script>
-</body>
 
-</html>
+            <div id="editFormContainer" style="display:none;">
+                <h3>Edit Game</h3>
+                <form id="editGameForm" method="POST" action="edit_game.php">
+                    <input type="hidden" name="game_id" id="editGameId">
+                    <input type="text" name="game_name" id="editGameName" placeholder="Game Name" required>
+                    <input type="text" name="game_type" id="editGameType" placeholder="Game Type" required>
+                    <button type="submit">Update Game</button>
+                    <button type="button" onclick="closeEditForm()">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openEditForm(id, name, type) {
+            document.getElementById('editGameId').value = id;
+            document.getElementById('editGameName').value = name;
+            document.getElementById('editGameType').value = type;
+            document.getElementById('editFormContainer').style.display = 'block';
+        }
+
+        function closeEditForm() {
+            document.getElementById('editFormContainer').style.display = 'none';
+        }
+    </script>
+</body>
